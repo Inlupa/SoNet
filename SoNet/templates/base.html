@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel='stylesheet' href="{% static 'css/looks_main.css' %}">
+    <link rel='stylesheet' href="{% static 'css/flex.css' %}">
+    <link rel='stylesheet' href="{% static 'css/classes.css' %}">
+    <link rel='stylesheet' href="{% static 'css/buttons.css' %}">
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="no_space">
+
+<nav class="navbar_header">
+    <ul class="nav_header-container">
+        <div class="location manrope_600">
+                    <li class="navitem flex "><a href="#"> <img src="{% static 'img/location_logo.png' %}" width="16px" height="16px" alt="Картинка"/> Вы в Москве </a></li>
+        </div>
+
+        <div class="support manrope_600">
+                <li class="flex "><a href="#"> Техническая поддержка </a></li>
+                <li class="flex "><a href="#"> +7(499)404-04-71 </a></li>
+                <li class="flex "><a href="#"> info@sonet.ru </a></li>
+        </div>
+
+
+        <div class="social_media manrope_600">
+            <li class="navitem flex ">
+                <a href="#">
+                <img src="{% static 'img/Telegram_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Telegram
+            </a></li>
+            <a href="#">
+                <img src="{% static 'img/Whatsapp_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Whatsapp
+            </a></li>
+        </div>
+    </ul>
+</nav>
+<div class="line"> </div>
+
+<nav class="navbar">
+    <ul class="nav-container">
+        <div class="logo">
+                    <li class="navitem flex "><a href="/"> <img src="{% static 'img/main_logo.png' %}" width="155.19px" height="38.82px" alt="Картинка"/> </a></li>
+        </div>
+        <div class="menu">
+                <li class="menuitem manrope flex "><a href="#"> Интернет </a></li>
+                <li class="menuitem manrope flex "><a href="#"> Телевидение</a></li>
+                <li class="menuitem manrope flex "><a href="#"> Хостинг услуги </a></li>
+                <li class="menuitem manrope flex "><a href="#"> Обслуживание </a>
+                <li class="menuitem manrope flex "><a href="#"> Абонентам </a></li>
+                <li class="menuitem manrope flex "><a href="#"> Новости </a></li>
+                <li class="menuitem manrope flex "><a href="#"> О провайдере </a></li>
+        </div>
+
+        <div class="">
+            <li class="navitem flex Button_small_blue" style="
+                        width: 151px;
+                        height: 35px;
+                        right: 173px;
+                        top: -3px;">
+                <a href="#"> Заявка на услуги </a></li>
+        </div>
+
+        <div class="accounts manrope">
+            <li class="navitem flex ">
+                <a href="#">
+                <img src="{% static 'img/account_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Личный кабинет
+            </a></li>
+        </div>
+    </ul>
+</nav>
+
+
+
+<div > {% block content %}{% endblock %}</div>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+

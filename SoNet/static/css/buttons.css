@@ -1,0 +1,78 @@
+.Button_small_blue{
+
+         display: flex;
+         flex-direction: row;
+         align-items: flex-start;
+          position: absolute;
+}
+
+.Button_small_blue a{
+
+    padding: 8px 16px;
+    gap: 10px;
+
+    text-decoration:none;
+    background: #8CC628;
+    color: #FFFFFF;
+    border-radius: 4px;
+
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+.Button_small_blue a:hover {
+    background: #8CC628;
+    box-shadow: 0px 12px 16px rgba(140, 198, 40, 0.25);
+    border-radius: 4px;
+    }
+
+.Button_small_blue a:onclik {
+
+    background: #8CC628;
+    box-shadow: 0px 12px 16px rgba(140, 198, 40, 0.25);
+    border-radius: 4px;
+    }
+
+
+
+.Button_blue a {
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 10px;
+        text-decoration:none;
+
+        font-family: 'Manrope';
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        /* identical to box height */
+
+
+        /* White/White */
+
+        color: #FFFFFF;
+
+        background: #8CC628;
+        border-radius: 6px;
+
+}
+
+.Button_blue a:hover {
+
+            background: #8CC628;
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+
+}
