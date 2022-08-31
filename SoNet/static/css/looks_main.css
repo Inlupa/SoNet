@@ -622,6 +622,7 @@ position: absolute;
         height: 573px;
         left: 260px;
         top: 1663px;
+
 }
 
 .more_header_container{
@@ -664,51 +665,59 @@ position: absolute;
 .card_more_1_container{
 
 
-            position: absolute;
-            width: 335px;
-            height: 334px;
-            left: 0px;
-            top: 0px;
 
-            background: red;
-            border-radius: 30px;
+
+            width: 335px;
+            height: 494px;
+
+            flex: none;
+            order: 0;
+            align-self: stretch;
+            flex-grow: 0;
 }
 
 .card_more_2_container{
-            position: absolute;
-            width: 335px;
-            height: 334px;
-            left: 355px;
-            top: 0px;
 
-            background: red;
-            border-radius: 30px;
+
+
+            width: 335px;
+            height: 494px;
+
+
+            flex: none;
+            order: 1;
+            align-self: stretch;
+            flex-grow: 0;
 }
 
 
 .card_more_3_container{
 
-            position: absolute;
-            width: 335px;
-            height: 334px;
-            left: 710px;
-            top: 0px;
 
-            background: red;
-            border-radius: 30px;
+
+            width: 335px;
+            height: 494px;
+
+
+            flex: none;
+            order: 2;
+            align-self: stretch;
+            flex-grow: 0;
 }
 
 
 .card_more_4_container{
 
-            position: absolute;
-            width: 335px;
-            height: 334px;
-            left: 1065px;
-            top: 0px;
 
-            background: red;
-            border-radius: 30px;
+
+            width: 335px;
+            height: 494px;
+
+
+            flex: none;
+            order: 3;
+            align-self: stretch;
+            flex-grow: 0;
 }
 
 .cm_content_container{
@@ -716,7 +725,7 @@ position: absolute;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 30px;
+
             gap: 10px;
 
 }
@@ -751,14 +760,14 @@ position: absolute;
         flex-grow: 0;
 }
 
-.pic_more1{
+/*.pic_more1{
     position: absolute;
     width: 335px;
     height: 405px;
     left: 0px;
     top: 0px;
 
-background: url();
+background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more1.png);
 
 
 }
@@ -770,7 +779,7 @@ background: url();
     left: 0px;
     top: 0px;
 
-    background: url();
+    background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more2.png);
     border-radius: 16px;
 }
 
@@ -782,7 +791,7 @@ background: url();
     left: 0px;
     top: 0px;
 
-    background: url();
+    background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more3.png);
     border-radius: 16px;
 
 }
@@ -795,6 +804,71 @@ background: url();
         left: 0px;
         top: 0px;
 
-        background: url();
+        background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more4.png);
         border-radius: 16px;
+}*/
+
+
+.connection{
+    position: absolute;
+    width: 1400px;
+    height: 267px;
+    left: 260px;
+    top: 2316px;
+
+    /* Secondary/Secondary */
+
+    background: #1A78CF;
+    border-radius: 30px;
+}
+
+
+.connection text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+
+    position: absolute;
+    width: 509px;
+    height: 147px;
+    left: 60px;
+    top: 60px;
+}
+
+
+.connection_header{
+
+    width: 509px;
+    height: 49px;
+
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.connection_content{
+
+    width: 509px;
+    height: 22px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
 }
