@@ -76,3 +76,29 @@
             border-radius: 6px;
 
 }
+
+.Button_border_primary a {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 10px;
+
+        font-family: 'Manrope';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+
+
+        color: #03213C;
+
+        border: 1px solid #03213C;
+        border-radius: 6px;
+}
+
+.Button_border_primary a:hover {
+
+            background: #03213C;
+            color: #FFFFFF;
+}

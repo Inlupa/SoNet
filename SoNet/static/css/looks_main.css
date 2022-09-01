@@ -21,7 +21,12 @@ nav_header-container{
     top: 0px;
 }
 
-.manrope_600 a{
+
+/*
+переделать этот тупой класс
+*/
+
+.manrope_600 a {
 
     font-family: 'Manrope';
     font-style: normal;
@@ -92,6 +97,8 @@ nav_header-container{
 .navbar {
     display:flex;
 }
+
+
 .nav-container {
     display:flex;
     position: absolute;
@@ -99,10 +106,6 @@ nav_header-container{
     height: 30px;
     left: 260px;
     top: 48px;
-}
-
-.flex{
-    display:flex;
 }
 
 
@@ -151,13 +154,178 @@ nav_header-container{
 
 }
 
+.menuitem a:hover {
+
+    transition:0.1s;
+    color: #1A78CF;
+}
+
 service_requests{
 
 }
-.manrope{
-    font-family: 'Manrope';
-    font-style: normal;
-    text-decoration:none
+
+
+footer{
+    position: absolute;
+    width: 1920px;
+    height: 415px;
+    left: 0px;
+    top: 3907px;
+
+    background: #E3EAF1;
+    border-radius: 60px 60px 0px 0px;
+}
+
+.footer_content{
+
+    position: absolute;
+    width: 1282px;
+    height: 295px;
+    left: 260px;
+    top: 40px;
+}
+
+.menu_footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 15px;
+
+    position: absolute;
+    width: 335px;
+    height: 225px;
+    left: 0px;
+    top: 70px;
+}
+.footeritem a {
+
+        width: 135px;
+        height: 25px;
+
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+
+        color: #03213C;
+
+}
+
+.footeritem a:hover {
+
+    transition:0.1s;
+    color: #1A78CF;
+}
+
+
+.help_footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    position: absolute;
+    width: 335px;
+    height: 146px;
+    left: 473px;
+    top: 70px;
+}
+
+
+.footer_help_header{
+    width: 335px;
+    height: 25px;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #03213C;
+}
+
+.footer_help_text{
+
+    width: 335px;
+    height: 38px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #03213C;
+}
+
+.footer_help_number{
+
+    width: 335px;
+    height: 33px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+
+    color: #03213C;
+}
+
+.footer_help_email{
+
+    width: 335px;
+    height: 25px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+    color: #03213C;
+}
+
+
+.socials_footer{
+
+    position: absolute;
+    width: 193px;
+    height: 19px;
+    right: 616px;
+    top: 256px;
+}
+
+.socials_footer a{
+
+    color: #979FA7;
+
+}
+
+.news_footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    position: absolute;
+    width: 335px;
+    height: 158px;
+    left: 947px;
+    top: 70px;
+}
+
+.footer_button{
+   position: absolute;
+   top: 110px;
+}
+
+
+
+.logo{
+    position: absolute;
+    width: 134px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
 }
 
 
@@ -222,6 +390,7 @@ service_requests{
 
 
 .banners{
+
     position: absolute;
     width: 1400px;
     height: 348px;
@@ -760,55 +929,6 @@ position: absolute;
         flex-grow: 0;
 }
 
-/*.pic_more1{
-    position: absolute;
-    width: 335px;
-    height: 405px;
-    left: 0px;
-    top: 0px;
-
-background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more1.png);
-
-
-}
-
-.pic_more2{
-    position: absolute;
-    width: 335px;
-    height: 405px;
-    left: 0px;
-    top: 0px;
-
-    background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more2.png);
-    border-radius: 16px;
-}
-
-.pic_more3{
-
-    position: absolute;
-    width: 335px;
-    height: 405px;
-    left: 0px;
-    top: 0px;
-
-    background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more3.png);
-    border-radius: 16px;
-
-}
-
-.pic_more4{
-
-        position: absolute;
-        width: 335px;
-        height: 405px;
-        left: 0px;
-        top: 0px;
-
-        background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more4.png);
-        border-radius: 16px;
-}*/
-
-
 .connection{
     position: absolute;
     width: 1400px;
@@ -872,3 +992,5 @@ background: url(C:\Users\Anton\PycharmProjects\SoNet\SoNet\static\img\more1.png)
     flex-grow: 0;
 
 }
+
+

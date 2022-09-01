@@ -1,0 +1,14 @@
+.flex{
+    display:flex;
+}
+
+.primary{
+    color: #03213C;
+}
+
+.manrope{
+    font-family: 'Manrope';
+    font-style: normal;
+    text-decoration:none
+}
+
