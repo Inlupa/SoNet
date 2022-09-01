@@ -3,7 +3,6 @@
 {% load static %}
 {% block content %}
 
-
 <div class="slider_container">
     <header class="slider manrope">
         Цифровые услуги для бизнеса и жизни
@@ -244,8 +243,23 @@
     </text>
 </section>
 
-<section class=" ">
+<section class="que">
 
 </section>
+
+<section class="news">
+
+   {% for news in news_list %}
+
+
+    {{ news.name }}
+
+
+    {% endfor %}
+
+
+</section>
+
+
 
 {% endblock %}
