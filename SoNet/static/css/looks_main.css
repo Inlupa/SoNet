@@ -1077,6 +1077,8 @@ position: absolute;
         flex-direction: row;
         align-items: flex-start;
         gap: 20px;
+        background: #F3F6F9;
+        border-radius: 60px;
 }
 
 .news_container{

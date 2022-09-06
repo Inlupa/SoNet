@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'news.apps.NewsConfig',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +71,7 @@ ALLOWED_HOSTS = ['85.26.234.248:10001', '85.26.234.248:10001', 'localhost', '0.0
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'road_rework_db',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'hornetm3',
         'HOST': 'localhost',

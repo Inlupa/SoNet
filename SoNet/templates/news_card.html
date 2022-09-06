@@ -1,7 +1,11 @@
 <div class="news_container">
-
-    <div class="news_content">
-            {% block text %}{% endblock %}
-    </div>
+    {% for object_id in news %}
+            <tr class='success'>
+                <td> {{ news.object_id }}</td>
+                <td> {{ news.news_url }}</td>
+                <td> {{ news.news_anno }}</td>
+                <td> {{ news.news_name }}</td>
+            </tr>
+{% endfor %}
 
 </div>
