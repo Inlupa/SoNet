@@ -248,9 +248,42 @@
 </section>
 
 <section class="news">
+    <nav class="news_nav">
+             <div class="last_news manrope"> Последние новости </div>
 
-{% include "news_card.html" %}
+        </nav>
+<div class="news_cards">
+{% for el in news %}
 
+            <div class='news_container'>
+
+                <div class="news_content">
+
+                    <div class="news_label">
+                        <img src="{% static 'img/news_date_icon.png' %}"  width="16px" height="16"  alt="Картинка"/>
+                        <div class="pub_date manrope">  {{ el.pub_date}}  </div>
+                    </div>
+
+                    <!--<div class="news_type">
+                        <img src="{% static 'img/news_type_icon.png' %}"  width="16px" height="16"  alt="Картинка"/>
+                        <div class="pub_date manrope">  {{ el.pub_date}}  </div>
+                    </div>-->
+
+                <div> <img src="{{el.news_url}}" alt="Картинка" width="393px" height="240"/> </div>
+
+
+                    <div class="news_header manrope"> {{ el.news_name }}</div>
+
+
+                <div class="news_anno manrope"> {{ el.news_anno}}</div>
+
+                </div>
+
+            </div>
+
+
+    {% endfor %}
+</div>
 </section>
 
 

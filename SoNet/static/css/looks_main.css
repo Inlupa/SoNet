@@ -3,8 +3,6 @@ html {
     width: 1920px;
     height: 4322px;
 
-
-    /* White/White */
     background: #FFFFFF;
 }
 
@@ -21,10 +19,6 @@ nav_header-container{
     top: 0px;
 }
 
-
-/*
-переделать этот тупой класс
-*/
 
 .manrope_600 a {
 
@@ -838,7 +832,6 @@ position: absolute;
         top: 1663px;
 
 }
-
 .more_header_container{
 
     position: absolute;
@@ -848,20 +841,15 @@ position: absolute;
     top: 0px;
 
 }
-
 .more header{
-
     font-weight: 400;
     font-size: 36px;
     line-height: 49px;
     text-align: center;
 
     color: #03213C;
-
 }
-
 .card_more_container{
-
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -873,14 +861,9 @@ position: absolute;
     height: 494px;
     left: 0px;
     top: 79px;
-
 }
 
 .card_more_1_container{
-
-
-
-
             width: 335px;
             height: 494px;
 
@@ -891,87 +874,74 @@ position: absolute;
 }
 
 .card_more_2_container{
+      width: 335px;
+      height: 494px;
 
 
-
-            width: 335px;
-            height: 494px;
-
-
-            flex: none;
-            order: 1;
-            align-self: stretch;
-            flex-grow: 0;
+      flex: none;
+      order: 1;
+      align-self: stretch;
+      flex-grow: 0;
 }
-
 
 .card_more_3_container{
+     width: 335px;
+     height: 494px;
 
-
-
-            width: 335px;
-            height: 494px;
-
-
-            flex: none;
-            order: 2;
-            align-self: stretch;
-            flex-grow: 0;
+     flex: none;
+     order: 2;
+     align-self: stretch;
+     flex-grow: 0;
 }
 
-
 .card_more_4_container{
+    width: 335px;
+    height: 494px;
 
-
-
-            width: 335px;
-            height: 494px;
-
-
-            flex: none;
-            order: 3;
-            align-self: stretch;
-            flex-grow: 0;
+    flex: none;
+    order: 3;
+    align-self: stretch;
+    flex-grow: 0;
 }
 
 .cm_content_container{
 
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-            gap: 10px;
+    gap: 10px;
 
 }
+
 .cm_content_header{
+    width: 300px;
+    max-height: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
 
-        width: 300px;
-        max-height: 50px;
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 25px;
+    color: #03213C;
 
-        color: #03213C;
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .cm_content_main{
 
-        width: 335px;
-        max-height: 38px;
+    width: 335px;
+    max-height: 38px;
 
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 19px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
 
-        color: #81909E;
+    color: #81909E;
 
-        flex: none;
-        order: 1;
-        flex-grow: 0;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .connection{
@@ -981,12 +951,9 @@ position: absolute;
     left: 260px;
     top: 2316px;
 
-    /* Secondary/Secondary */
-
     background: #1A78CF;
     border-radius: 30px;
 }
-
 
 .connection text{
     display: flex;
@@ -1002,16 +969,13 @@ position: absolute;
     top: 60px;
 }
 
-
 .connection_header{
-
     width: 509px;
     height: 49px;
 
     font-weight: 400;
     font-size: 36px;
     line-height: 49px;
-
 
     color: #FFFFFF;
 
@@ -1020,9 +984,7 @@ position: absolute;
     flex-grow: 0;
 }
 
-
 .connection_content{
-
     width: 509px;
     height: 22px;
 
@@ -1035,9 +997,7 @@ position: absolute;
     flex: none;
     order: 1;
     flex-grow: 0;
-
 }
-
 
 .news{
     position: absolute;
@@ -1051,9 +1011,7 @@ position: absolute;
     z-index:-1;
 }
 
-
 .que{
-
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -1066,48 +1024,122 @@ position: absolute;
     left: 450px;
     top: 2663px;
 
-    /* BG/Light */
-
     background: #F3F6F9;
     border-radius: 30px;
     }
 
 .news{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 20px;
-        background: #F3F6F9;
-        border-radius: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    background: #F3F6F9;
+    border-radius: 60px;
 }
 
 .news_container{
+    width: 453px;
+    height: 565px;
 
-        width: 453px;
-        height: 565px;
+    background: #FFFFFF;
+    border-radius: 30px;
 
-        background: #FFFFFF;
-        border-radius: 30px;
+    flex: none;
+    flex-grow: 0;
+}
 
-        flex: none;
-        flex-grow: 0;
-    }
+.news_cards{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    position: absolute;
+    width: 1399px;
+    height: 644px;
+    left: 260px;
+    top: 119px;
+}
 
 .news_content{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 10px;
 
-        width: 393px;
-        height: 505px;
+    width: 393px;
+    height: 505px;
+}
 
+.pub_date{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    padding:0px;
+    margin:0px;
 
-        /* Inside auto layout */
+    color: #81909E;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.news_header{
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+
+      color: #03213C;
+
+      flex: none;
+      order: 1;
+      align-self: stretch;
+      flex-grow: 0;
+
+}
+
+.news_anno{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        color: #03213C;
 
         flex: none;
-        order: 0;
+        order: 2;
+        align-self: stretch;
         flex-grow: 0;
-        z-index: 1;
-    }
+}
+
+.news_nav{
+        position: absolute;
+        width: 334px;
+        height: 48px;
+        left: 260px;
+        top: 40px;
+}
+.last_news{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding: 0px;
+    gap: 10px;
+
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+
+    color: #03213C;
+
+    flex: none;
+    flex-grow: 0;
+
+    position: absolute;
+    width: 375px;
+    height: 49px;
+    left: 0px;
+    top: 0px;
+}

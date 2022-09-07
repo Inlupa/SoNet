@@ -12,3 +12,21 @@
     text-decoration:none
 }
 
+.news_label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px 3px;
+    gap: 5px;
+    margin:0px;
+
+    height: 27px;
+
+    background: #F3F6F9;
+    color: #81909E;
+    border-radius: 6px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

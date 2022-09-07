@@ -8,14 +8,13 @@ from .models import News
 #     article_filter = ArticleFilter(request.GET, queryset=article_list)
 #     return render(request, "insert_article/article_search_display.html", {'filter': article_filter})
 
-def news_mainpage(request, object_id):
-    instance = News.objects.all()
-    news_url = instance.news_url
-    news_anno = instance.news_anno
-    news_name = instance.news_name
+def news_mainpage(request):
+    news = News.objects.all()
+    # news_url = instance.news_url
+    # news_anno = instance.news_anno
+    # news_name = instance.news_name
+    return render(request, "news_card.html", {'news':news })
 
-    return render(request, "news_card.html",
-                  context={ 'object_id': object_id, 'news_url': news_url, 'news_name': news_name, 'news_anno':news_anno, 'instance':instance })
 
 
 # class NewsView(ListView):
