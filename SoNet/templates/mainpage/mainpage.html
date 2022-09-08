@@ -248,20 +248,105 @@
 </section>
 
 <section class="news">
-    <nav class="news_nav">
+    <!--<nav class="news_nav">
              <div class="last_news manrope"> Последние новости </div>
 
-        </nav>
-<div class="news_cards">
-{% for el in news %}
+            <div class="pagination">
 
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}"> next </a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}"> last &raquo; </a>
+                {% endif %}
+            </span>
+        </div>
+
+        </nav>
+-->
+
+   <!-- <table class="layui-table">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Текст</th>
+        <th>Ссылка</th>
+
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    &lt;!&ndash;// Содержание первой страницы по умолчанию&ndash;&gt;
+    {% for el in news %}
+        <tr>
+            <td>{{ el.news_name }}</td>
+            <td>{{ el.news_anno }}</td>
+            <td>{{ el.news_url }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+        <div style="text-align: center;margin: 5% 0;">
+            <form id="page" action="{% url 'home' %}">
+                <a class="first_page">
+                    <button type="button">Предыдущая страница</button>
+                </a>
+
+                &lt;!&ndash;// Количество страниц удобное&ndash;&gt;
+                {% for el in news.paginator.page_range %}
+                    <a class="now_page">
+                        <button type="button" > {{ el }} </button>
+                    </a>
+                {% endfor %}
+
+                <button id="num_pages" type="button">
+                                 Общее количество {{ news.paginator.num_pages }}  Страница
+                </button>
+
+                <a class="last_page">
+                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">Следующая страница</button>
+                </a>
+            </form>
+        </div>-->
+
+
+
+
+
+
+{% block pagination %}
+    <p>
+        Current Page: <b id="current"> {{page_obj.number}} </b>
+    </p>
+
+    <nav>
+        <a href=# id="prev">
+            Previous Page
+        </a>
+        <a href=# id="next">
+            Next Page
+        </a>
+    </nav>
+    <div class="news_cards">
+
+{% for contact in page_obj %}
+<div id="keywords">
+
+</div>
             <div class='news_container'>
 
                 <div class="news_content">
 
                     <div class="news_label">
                         <img src="{% static 'img/news_date_icon.png' %}"  width="16px" height="16"  alt="Картинка"/>
-                        <div class="pub_date manrope">  {{ el.pub_date}}  </div>
+                        <div class="pub_date manrope">  {{ contact.pub_date}}  </div>
                     </div>
 
                     <!--<div class="news_type">
@@ -269,13 +354,13 @@
                         <div class="pub_date manrope">  {{ el.pub_date}}  </div>
                     </div>-->
 
-                <div> <img src="{{el.news_url}}" alt="Картинка" width="393px" height="240"/> </div>
+                <div> <img src="{{contact.news_url}}" alt="Картинка" width="393px" height="240"/> </div>
 
 
-                    <div class="news_header manrope"> {{ el.news_name }}</div>
+                    <div class="news_header manrope"> {{ contact.news_name }}</div>
 
 
-                <div class="news_anno manrope"> {{ el.news_anno}}</div>
+                <div class="news_anno manrope"> {{ contact.news_anno}}</div>
 
                 </div>
 
@@ -284,6 +369,10 @@
 
     {% endfor %}
 </div>
+
+
+{% endblock %}
+
 </section>
 
 

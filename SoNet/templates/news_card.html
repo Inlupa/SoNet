@@ -1,11 +1,51 @@
-<div class="news_container">
-    {% for el in news %}
-            <tr class='success'>
-                <td> {{ el.object_id }}</td>
-                <td> {{ el.news_url }}</td>
-                <td> {{ el.news_anno }}</td>
-                <td> {{ el.news_name }}</td>
-            </tr>
-    {% endfor %}
+{% extends "base.html" %}
+{% block title %} SoNet {% endblock %}
+{% load static %}
 
+{% block content %}
+
+<table class="layui-table">
+    <thead>
+    <tr>
+        <th>пользователь</th>
+        <th>Идентичность</th>
+        <th>Пол</th>
+
+    </tr>
+    </thead>
+    <tbody id="tbody">
+    <!--// Содержание первой страницы по умолчанию-->
+    {% for u in users %}
+        <tr>
+            <td>{{ u.username }}</td>
+            <td>{{ u.is_rank }}</td>
+            <td>{{ u.sex }}</td>
+
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div style="text-align: center;margin: 5% 0;">
+    <form id="page" action="{% url 'console' %}">
+        <a class="first_page">
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">Предыдущая страница</button>
+        </a>
+
+		<!--// Количество страниц удобное-->
+        {% for num in users.paginator.page_range %}
+            <a class="now_page">
+                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"> {{ num }} </button>
+            </a>
+        {% endfor %}
+
+        <button id="num_pages" type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                         Общее количество {{ users.paginator.num_pages }} Страница
+        </button>
+
+        <a class="last_page">
+            <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">Следующая страница</button>
+        </a>
+    </form>
 </div>
+
+{% endblock %}
