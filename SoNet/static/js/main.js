@@ -24,10 +24,7 @@ new Swiper('.image-slider',{
 });
 
 
-
-
-
-    async function getData(url, page, paginateBy) {
+    /*async function getData(url, page, paginateBy) {
         const urlWithParams = url + "?" + new URLSearchParams({
             page: page,
             per_page: paginateBy
@@ -61,14 +58,14 @@ new Swiper('.image-slider',{
             this.pageIndex++
             this.goToPage()
         }
-/*
-        тут надо разобраться как добавить мои новости в элемент ниже
-*/
 
         addElement(keyword) {
-            const pre = document.createElement("div")
+
+            const pre = document.ch
+
             pre.append(keyword)
-            this.container.append(pre)
+
+            this.container.appendChild(pre)
         }
 
         goToPage() {
@@ -76,10 +73,12 @@ new Swiper('.image-slider',{
                 .then(response => {
                     this.container.innerHTML = '';
                     response.data.forEach((el) => {
+
                         this.addElement(el.news_name)
                         this.addElement(el.news_url)
                         this.addElement(el.pub_date)
                         this.addElement(el.news_anno)
+
                     });
                     this.label.innerText = this.pageIndex
                     const firstPage = this.pageIndex === 1
@@ -90,62 +89,89 @@ new Swiper('.image-slider',{
         }
     }
 
-    new FauxPaginator(3);
+    new FauxPaginator(3);*/
 
 
-//$(function () {
-//        // пагинация ajax
-//        let now_page = 1;
-//
-//        $('.now_page').first().addClass('page_this');
-//        // Предыдущий
-//
-//        $('.first_page').click(function () {
-//            now_page =  now_page - 1;
-//            if (now_page < 1) {
-//                now_page = 1;
-//                return false
-//            } else {
-//                $('.page_this').parent().prev().click();
-//            }
-//        });
-//        //Следующая страница
-//        $('.last_page').click(function () {
-//            let num_pages = $('.now_page').last().text();
-//            now_page = now_page + 1;
-//            if (now_page > parseInt(num_pages)) {
-//                now_page = now_page - 1;
-//                return false
-//            } else {
-//                $('.page_this').parent().next().click();
-//            }
-//        });
-//        // Переключить страницу
-//        $('.now_page').click(function () {
-//            now_page = parseInt($(this).children('button').text());
-//            $('.now_page').removeClass('page_this')
-//            $(this).addClass('page_this');
-//            $(this).children('button').addClass('page_this');
-//            page_click()
-//        });
-//
-//        function page_click() {
-//            let page_form = $('#page');
-//            $.ajax({
-//                type: 'get',
-//                url: page_form.attr('action'),
-//                data: {page: now_page},
-//                success: function (data) {
-//                    $('#tbody tr').remove();
-//                    $('#num_pages').html('Все вместе' + data.num_pages + 'страница');
-//
-//                    $.each(data.news_li, function (index, news) {
-//                        let a = '<td>';
-//                        let b = '</td>';
-//                        let body = a + news.news_name + b + a + news.news_anno + b + a + news.news_url + b;
-//                        $('#tbody').append('<tr>' + body + '</tr>');
-//                    });
-//                }
-//            })
-//        }
-//    })
+
+    class ItcAccordion {
+      constructor(target, config) {
+        this._el = typeof target === 'string' ? document.querySelector(target) : target;
+        const defaultConfig = {
+          alwaysOpen: true,
+          duration: 350
+        };
+        this._config = Object.assign(defaultConfig, config);
+        this.addEventListener();
+      }
+      addEventListener() {
+        this._el.addEventListener('click', (e) => {
+          const elHeader = e.target.closest('.accordion__header');
+          if (!elHeader) {
+            return;
+          }
+          if (!this._config.alwaysOpen) {
+            const elOpenItem = this._el.querySelector('.accordion__item_show');
+            if (elOpenItem) {
+              elOpenItem !== elHeader.parentElement ? this.toggle(elOpenItem) : null;
+            }
+          }
+          this.toggle(elHeader.parentElement);
+        });
+      }
+      show(el) {
+        const elBody = el.querySelector('.accordion__body');
+        if (elBody.classList.contains('collapsing') || el.classList.contains('accordion__item_show')) {
+          return;
+        }
+        elBody.style['display'] = 'block';
+        const height = elBody.offsetHeight;
+        elBody.style['height'] = 0;
+        elBody.style['overflow'] = 'hidden';
+        elBody.style['transition'] = `height ${this._config.duration}ms ease`;
+        elBody.classList.add('collapsing');
+        el.classList.add('accordion__item_slidedown');
+        elBody.offsetHeight;
+        elBody.style['height'] = `${height}px`;
+        window.setTimeout(() => {
+          elBody.classList.remove('collapsing');
+          el.classList.remove('accordion__item_slidedown');
+          elBody.classList.add('collapse');
+          el.classList.add('accordion__item_show');
+          elBody.style['display'] = '';
+          elBody.style['height'] = '';
+          elBody.style['transition'] = '';
+          elBody.style['overflow'] = '';
+        }, this._config.duration);
+      }
+      hide(el) {
+        const elBody = el.querySelector('.accordion__body');
+        if (elBody.classList.contains('collapsing') || !el.classList.contains('accordion__item_show')) {
+          return;
+        }
+        elBody.style['height'] = `${elBody.offsetHeight}px`;
+        elBody.offsetHeight;
+        elBody.style['display'] = 'block';
+        elBody.style['height'] = 0;
+        elBody.style['overflow'] = 'hidden';
+        elBody.style['transition'] = `height ${this._config.duration}ms ease`;
+        elBody.classList.remove('collapse');
+        el.classList.remove('accordion__item_show');
+        elBody.classList.add('collapsing');
+        window.setTimeout(() => {
+          elBody.classList.remove('collapsing');
+          elBody.classList.add('collapse');
+          elBody.style['display'] = '';
+          elBody.style['height'] = '';
+          elBody.style['transition'] = '';
+          elBody.style['overflow'] = '';
+        }, this._config.duration);
+      }
+      toggle(el) {
+        el.classList.contains('accordion__item_show') ? this.hide(el) : this.show(el);
+      }
+    }
+
+    new ItcAccordion(document.querySelector('.accordion'), {
+      alwaysOpen: true
+    });
+

@@ -10,10 +10,7 @@ from .models import News
 
 def news_mainpage(request):
     news = News.objects.all()
-    # news_url = instance.news_url
-    # news_anno = instance.news_anno
-    # news_name = instance.news_name
-    return render(request, "news_card.html", {'news':news })
+    return render(request, "news/news_main.html", {'news':news })
 
 
 

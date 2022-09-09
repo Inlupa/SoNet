@@ -1015,7 +1015,7 @@ position: absolute;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 40px 60px;
+    padding: 40px 60px 40px 130px;
     gap: 40px;
 
     position: absolute;
@@ -1087,7 +1087,7 @@ position: absolute;
     flex-grow: 0;
 }
 
-.news_header{
+.news_name{
       font-weight: 600;
       font-size: 24px;
       line-height: 33px;
@@ -1143,3 +1143,94 @@ position: absolute;
     left: 0px;
     top: 0px;
 }
+
+.accordion{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    /*gap: 32px;*/
+    width: 806px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+.accordion__item {
+      box-shadow: 0 0.05rem  rgb(0 0 0 / 15%);
+    }
+
+    .accordion__header {
+
+
+        width:806px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      color: #03213C;
+      font-weight: 600;
+      font-size:18px;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-out;
+    }
+
+    .accordion__header::before {
+      position: absolute;
+      left:110px;
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-left: auto;
+      background:url('../img/accordion_arrow.png');
+      background-repeat: no-repeat;
+      background-size: 1.2rem;
+      content: "";
+      transition: transform 0.1s ;
+    }
+
+    .accordion__item_show .accordion__header::before,
+    .accordion__item_slidedown .accordion__header::before {
+      transform: rotate(-180deg);
+    }
+
+    .accordion__header:hover {
+      color: #609800;
+      transition: 0.1;
+    }
+
+    .accordion__item:not(.accordion__item_show) .accordion__header {
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    .accordion__content {
+
+      width:806px;
+      padding: 0.75rem 1rem;
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    .accordion__item:not(.accordion__item_show) .accordion__body {
+      display: none;
+    }
+
+    .que_header{
+
+        width: 806px;
+        height: 49px;
+
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 49px;
+
+        color: #03213C;
+
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+    }

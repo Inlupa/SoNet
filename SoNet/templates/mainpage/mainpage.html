@@ -150,7 +150,7 @@
 
         <div class="card_about_4_container">
             <div class="ca_content_container manrope">
-                <article class="ca_content_header manrope"> Техническая поддержка 24/7/365</article>
+                <article class="ca_content_header manrope"> Техническая поддержка 24/7/365 </article>
                 <div class="ca_content_main manrope"> Круглосуточная техническая поддержка по телефону и в личном
                     кабинете, а также услугу удаленного обслуживания. Среднее время ответа на обращение составляет не
                     более 10 минут.
@@ -245,108 +245,96 @@
 
 <section class="que">
 
+<div id="accordion" class="accordion">
+
+        <div class="que_header manrope"> Часто задаваемые вопросы </div>
+
+    <div class="accordion__item manrope">
+      <div class="accordion__header manrope">
+        Как это работает?
+      </div>
+      <div class="accordion__body manrope">
+        <div class="accordion__content manrope">
+          Создали большую базу знаний с информацией про продукты, их настройку и управление. А для разработчиков — отдельный портал по автоматизации IT-инфраструктуры. Все на русском языке.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion__item manrope">
+      <div class="accordion__header manrope">
+        Как подключить домашний интернет?
+      </div>
+      <div class="accordion__body manrope">
+        <div class="accordion__content manrope">
+          Создали большую базу знаний с информацией про продукты, их настройку и управление. А для разработчиков — отдельный портал по автоматизации IT-инфраструктуры. Все на русском языке.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion__item manrope">
+      <div class="accordion__header manrope">
+        Как действуют тарифы на подключение интернета?
+      </div>
+      <div class="accordion__body manrope">
+        <div class="accordion__content manrope">
+          Создали большую базу знаний с информацией про продукты, их настройку и управление. А для разработчиков — отдельный портал по автоматизации IT-инфраструктуры. Все на русском языке.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion__item manrope ">
+      <div class="accordion__header manrope">
+        Преимущества безлимитного интернета SONET
+      </div>
+      <div class="accordion__body manrope">
+        <div class="accordion__content manrope">
+          Создали большую базу знаний с информацией про продукты, их настройку и управление. А для разработчиков — отдельный портал по автоматизации IT-инфраструктуры. Все на русском языке.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion__item manrope">
+      <div class="accordion__header manrope">
+        Как узнать, можно ли подключить в доме интернет SONET?
+      </div>
+      <div class="accordion__body manrope">
+        <div class="accordion__content manrope">
+          Создали большую базу знаний с информацией про продукты, их настройку и управление. А для разработчиков — отдельный портал по автоматизации IT-инфраструктуры. Все на русском языке.
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section class="news">
-    <!--<nav class="news_nav">
-             <div class="last_news manrope"> Последние новости </div>
-
-            <div class="pagination">
-
-            <span class="step-links">
-                {% if page_obj.has_previous %}
-                    <a href="?page=1">&laquo; first</a>
-                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
-                {% endif %}
-
-                <span class="current">
-                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-                </span>
-
-                {% if page_obj.has_next %}
-                    <a href="?page={{ page_obj.next_page_number }}"> next </a>
-                    <a href="?page={{ page_obj.paginator.num_pages }}"> last &raquo; </a>
-                {% endif %}
-            </span>
-        </div>
-
-        </nav>
--->
-
-   <!-- <table class="layui-table">
-    <thead>
-    <tr>
-        <th>Название</th>
-        <th>Текст</th>
-        <th>Ссылка</th>
-
-    </tr>
-    </thead>
-    <tbody id="tbody">
-    &lt;!&ndash;// Содержание первой страницы по умолчанию&ndash;&gt;
-    {% for el in news %}
-        <tr>
-            <td>{{ el.news_name }}</td>
-            <td>{{ el.news_anno }}</td>
-            <td>{{ el.news_url }}</td>
-        </tr>
-    {% endfor %}
-    </tbody>
-</table>
-        <div style="text-align: center;margin: 5% 0;">
-            <form id="page" action="{% url 'home' %}">
-                <a class="first_page">
-                    <button type="button">Предыдущая страница</button>
-                </a>
-
-                &lt;!&ndash;// Количество страниц удобное&ndash;&gt;
-                {% for el in news.paginator.page_range %}
-                    <a class="now_page">
-                        <button type="button" > {{ el }} </button>
-                    </a>
-                {% endfor %}
-
-                <button id="num_pages" type="button">
-                                 Общее количество {{ news.paginator.num_pages }}  Страница
-                </button>
-
-                <a class="last_page">
-                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">Следующая страница</button>
-                </a>
-            </form>
-        </div>-->
-
-
-
-
-
 
 {% block pagination %}
-    <p>
+    <!--<p>
         Current Page: <b id="current"> {{page_obj.number}} </b>
-    </p>
+    </p>-->
 
-    <nav>
+    <!--<nav>
         <a href=# id="prev">
-            Previous Page
+
         </a>
         <a href=# id="next">
-            Next Page
+
         </a>
-    </nav>
-    <div class="news_cards">
+    </nav>-->
 
+<div class="news_cards">
 {% for contact in page_obj %}
-<div id="keywords">
 
-</div>
+<div id="keywords"></div>
+
             <div class='news_container'>
 
                 <div class="news_content">
 
                     <div class="news_label">
                         <img src="{% static 'img/news_date_icon.png' %}"  width="16px" height="16"  alt="Картинка"/>
-                        <div class="pub_date manrope">  {{ contact.pub_date}}  </div>
+                        <div  class="pub_date manrope">  {{ contact.pub_date}}  </div>
                     </div>
 
                     <!--<div class="news_type">
@@ -357,15 +345,14 @@
                 <div> <img src="{{contact.news_url}}" alt="Картинка" width="393px" height="240"/> </div>
 
 
-                    <div class="news_header manrope"> {{ contact.news_name }}</div>
+                    <div class="news_header manrope"> {{ contact.news_name }} </div>
 
 
-                <div class="news_anno manrope"> {{ contact.news_anno}}</div>
+                <div class="news_anno manrope"> {{ contact.news_anno}} </div>
 
                 </div>
 
             </div>
-
 
     {% endfor %}
 </div>
