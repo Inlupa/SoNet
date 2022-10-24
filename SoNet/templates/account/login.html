@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 {% block title %} Авторизация {% endblock %}
 {% block content %}
-    <div class="text-on-site flex flex-horizontal-center" > Введите логин и пароль для входа </div>
 
+<div class="slider_container">
+    <header class="slider manrope">
+        Заявка на подключение
+    </header>
+</div>
+
+    <div class="text-on-site flex flex-horizontal-center" > Введите логин и пароль для входа </div>
 
     <form action="." method="post">
 
@@ -23,11 +29,5 @@
         </div>
         {% csrf_token %}
     </form>
-{% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}> {{ message }} </li>
-            {% endfor %}
-        </ul>
-{% endif %}
+
 {% endblock %}
