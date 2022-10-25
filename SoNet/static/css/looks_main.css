@@ -1286,3 +1286,48 @@ position: absolute;
         background: #F3F6F9;
         border-radius: 60px
         }
+
+.nav_offer{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 12px 24px;
+        gap: 40px;
+
+        position: absolute;
+        width: 501px;
+        height: 46px;
+        left: calc(50% - 501px/2 - 449.5px);
+        top: 40px;
+
+        background: #FFFFFF;
+        border-radius: 43px;
+}
+
+.nav_offer_block{
+        padding:12px;
+        /* Text/Bold */
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        /* Secondary/Secondary */
+        color: #81909E;
+        /* Inside auto layout */
+        transition:0.1s;
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+}
+
+.nav_offer_block:hover {
+    color: #1A78CF;
+    transition:0.1s;
+}
+
+.offer_name{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    color: #03213C;
+}
