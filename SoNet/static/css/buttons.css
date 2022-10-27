@@ -102,3 +102,75 @@
             background: #03213C;
             color: #FFFFFF;
 }
+
+
+/*
+button for home or flat */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 157px;
+  height: 44px;
+
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider1 {
+  position: absolute;
+  cursor: pointer;
+  dispay:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border-radius: 60px;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+
+}
+
+.slider1:before {
+  position: absolute;
+  dispay:flex;
+  text-align:center;
+  content: "Дом";
+  width: 81px;
+  height: 32px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 60px;
+  padding:2px;
+
+  background: #8CC628;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider1 {
+
+}
+
+input:focus + .slider1 {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider1:before {
+
+   content: "Квартира";
+  -webkit-transform: translateX(65px);
+  -ms-transform: translateX(65px);
+  transform: translateX(65px);
+}

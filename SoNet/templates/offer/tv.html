@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %} Вход {% endblock %}
+{% load static %}
 {% block content %}
 
 <div class="slider_container">
@@ -17,11 +18,23 @@
             <a href="/offer/tv" class = "nav_offer_block manrope"> ТВ </a>
             <a href="/offer/hosting" class = "nav_offer_block manrope"> Хостинг </a>
         </div>
-    </div>
 
-    <div class="offer_name manrope">
+         <div class="offer_name manrope">
              ТВ
          </div>
+
+         <label class="switch manrope">
+            <input type="checkbox">
+            <span class="slider1"></span>
+        </label>
+
+        <div class="manrope offer_title">
+            Выберите тарифное предложение
+        </div>
+    </div>
+
+
+
 
 </div>
 {% endblock %}
