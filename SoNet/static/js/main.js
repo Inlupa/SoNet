@@ -175,3 +175,26 @@ new Swiper('.image-slider',{
       alwaysOpen: true
     });
 
+
+
+function raschitat() {
+    cvet  = document.getElementById('cvet').value;
+    switch (cvet) {
+       case "nach":
+          cena = 0;
+          break
+       case "comfort":
+          cena = 350;
+          break
+        case "opti":
+          cena = 150;
+          break
+       default:
+          cena = 0;
+          break
+    }
+    document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ cena +" р.";
+}
+
+
+

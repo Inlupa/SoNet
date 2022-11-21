@@ -30,3 +30,13 @@
     order: 0;
     flex-grow: 0;
 }
+
+.all_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.inside_base{
+    order:1;
+}

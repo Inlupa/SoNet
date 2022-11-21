@@ -31,10 +31,105 @@
         <div class="manrope offer_title">
             Выберите тарифное предложение
         </div>
+
+         <div class="offer_tariff_container">
+
+            <div class="offer_card_container">
+                <div class="offer_card_info">
+                    <div class="manrope offer_card_info_title"> Начальный </div>
+                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
+                </div>
+
+                <div style="padding:30px;">
+                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
+                                                        height="40px" alt="Картинка"/>
+                </div>
+
+                <h3 class="manrope"> Бесплатно  </h3>
+
+            </div>
+
+
+            <div class="offer_card_container">
+                <div class="offer_card_info">
+                    <div class="manrope offer_card_info_title"> Оптимальный </div>
+                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
+                </div>
+
+                <div style="padding:30px;">
+                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
+                                                        height="40px" alt="Картинка"/>
+                </div>
+
+                <h3 class="manrope"> 150 руб./мес  </h3>
+
+            </div>
+
+
+            <div class="offer_card_container">
+                <div class="offer_card_info">
+                    <div class="manrope offer_card_info_title"> Комфортный </div>
+                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
+                </div>
+
+                <div style="padding:30px;">
+                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
+                                                        height="40px" alt="Картинка"/>
+                </div>
+
+                <h3 class="manrope"> 350 руб./мес  </h3>
+
+            </div>
+        </div>
     </div>
 
+</div>
 
+<div class="form_offer_container">
+    <div class="manrope offer_title">
+            Оформите заявку на подключение
+        </div>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form_offer">
+            <div>
+                {{offer_form.user_id}}
+            </div>
 
+            <div>
+                {{offer_form.name}}
+            </div>
+
+            <div>
+                {{offer_form.phone_number}}
+            </div>
+
+            <div>
+                {{offer_form.region}}
+            </div>
+
+            <div>
+                {{offer_form.city}}
+            </div>
+
+        </div>
+            <div>
+                {{offer_form.adress}}
+            </div>
+
+            <input  class="submit_button" type="submit" value="Отправить заявку">
+    </form>
+
+    <div>
+        <h3> Расчет стоимости тарифа </h3>
+        <select  onblur="raschitat();" id="cvet">
+            <option value="nach">Начальный</option>
+            <option value="comfort"> Комфортный </option>
+            <option value="opti"> Оптимальный </option>
+        </select>
+    <div id="stoimost"></div>
 
 </div>
+</div>
+
 {% endblock %}

@@ -3,7 +3,7 @@
 {% load static %}
 {% block content %}
 
-
+<div class="offer_wrapper">
 <div class="slider_container" xmlns="http://www.w3.org/1999/html">
     <header class="slider manrope">
         Заявка на подключение
@@ -78,12 +78,59 @@
                                                         height="40px" alt="Картинка"/>
                 </div>
 
-                <h3 class="manrope"> 350 руб./мес  </h3>
+                <h3 class="manrope"> 350 руб./мес </h3>
 
             </div>
         </div>
     </div>
+</div>
+<div class="form_offer_container">
+    <div class="manrope offer_title">
+            Оформите заявку на подключение
+        </div>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form_offer">
+            <div>
+                {{offer_form.user_id}}
+            </div>
 
+            <div>
+                {{offer_form.name}}
+            </div>
+
+            <div>
+                {{offer_form.phone_number}}
+            </div>
+
+            <div>
+                {{offer_form.region}}
+            </div>
+
+            <div>
+                {{offer_form.city}}
+            </div>
+
+        </div>
+            <div>
+                {{offer_form.adress}}
+            </div>
+
+            <input  class="submit_button" type="submit" value="Отправить заявку">
+    </form>
+<div>
+        <h3> Расчет стоимости тарифа </h3>
+        <select  onblur="raschitat();" id="cvet">
+            <option value="nach">Начальный</option>
+            <option value="comfort"> Комфортный </option>
+            <option value="opti"> Оптимальный </option>
+        </select>
+    <div id="stoimost"></div>
 
 </div>
+
+</div>
+
+</div>
+
 {% endblock %}

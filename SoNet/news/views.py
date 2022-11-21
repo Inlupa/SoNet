@@ -12,8 +12,6 @@ def news_mainpage(request):
     news = News.objects.all()
     return render(request, "news/news_main.html", {'news':news })
 
-
-
 # class NewsView(ListView):
 #     model = News
 #     template_name = 'news_card.html'
