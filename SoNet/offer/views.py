@@ -1,35 +1,42 @@
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView
 from .forms import OfferInfoForm
+from .models import TariffsInternetTv, TariffsTv, TariffsInternet
 
 
 def internet_tv(request):
     offer_form = OfferInfoForm(request.POST)
+    tariffs = TariffsInternetTv.objects.all()
     if request.method == 'POST':
         #если юзер заел в профиль то подтянуть айди  и сотальные данные из базы, если нет то надо
         offer_form = OfferInfoForm(request.POST)
         if offer_form.is_valid():
             offer_form.save()
-    return render(request,'offer/internet_tv.html', context={'offer_form':offer_form})
+
+    return render(request,'offer/internet_tv.html', context= {'tariffs': tariffs,'offer_form': offer_form })
 
 
+
+#тут надо будет подключить из базы список тарифов которые надо будет выводить на сайт и поддключить к ним калькулятор(3 часа работы, может два часа)
 def internet(request):
     offer_form = OfferInfoForm(request.POST)
+    tariffs = TariffsInternet.objects.all()
     if request.method == 'POST':
         # если юзер заел в профиль то подтянуть айди  и сотальные данные из базы, если нет то надо
         offer_form = OfferInfoForm(request.POST)
         if offer_form.is_valid():
             offer_form.save()
-    return render(request,'offer/internet.html', context={'offer_form':offer_form})
+    return render(request,'offer/internet.html', context={'tariffs': tariffs, 'offer_form':offer_form})
 
 def tv(request):
     offer_form = OfferInfoForm(request.POST)
+    tariffs = TariffsTv.objects.all()
     if request.method == 'POST':
         # если юзер заел в профиль то подтянуть айди  и сотальные данные из базы, если нет то надо
         offer_form = OfferInfoForm(request.POST)
         if offer_form.is_valid():
             offer_form.save()
-    return render(request,'offer/tv.html', context={'offer_form':offer_form})
+    return render(request,'offer/tv.html', context={'tariffs': tariffs, 'offer_form':offer_form})
 
 def hosting(request):
     offer_form = OfferInfoForm(request.POST)

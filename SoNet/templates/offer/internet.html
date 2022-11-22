@@ -32,9 +32,10 @@
 
         <div class="offer_tariff_container">
 
+            {% for tariff in tariffs %}
             <div class="offer_card_container">
                 <div class="offer_card_info">
-                    <div class="manrope offer_card_info_title"> Начальный </div>
+                    <div class="manrope offer_card_info_title"> {{tariff.name}} </div>
                     <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
                 </div>
 
@@ -43,101 +44,14 @@
                                                         height="40px" alt="Картинка"/>
                 </div>
 
-                <h3 class="manrope"> Бесплатно  </h3>
+                <h3 class="manrope"> {{tariff.price}} </h3>
 
             </div>
+            {% endfor %}
 
 
-            <div class="offer_card_container">
-                <div class="offer_card_info">
-                    <div class="manrope offer_card_info_title"> Оптимальный </div>
-                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
-                </div>
-
-                <div style="padding:30px;">
-                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
-                                                        height="40px" alt="Картинка"/>
-                </div>
-
-                <h3 class="manrope"> 150 руб./мес  </h3>
-
-            </div>
 
 
-            <div class="offer_card_container">
-                <div class="offer_card_info">
-                    <div class="manrope offer_card_info_title"> Комфортный </div>
-                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
-                </div>
-
-                <div style="padding:30px;">
-                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
-                                                        height="40px" alt="Картинка"/>
-                </div>
-
-                <h3 class="manrope"> 350 руб./мес  </h3>
-
-            </div>
-
-            <div class="offer_card_container">
-                <div class="offer_card_info">
-                    <div class="manrope offer_card_info_title"> Комфортный </div>
-                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
-                </div>
-
-                <div style="padding:30px;">
-                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
-                                                        height="40px" alt="Картинка"/>
-                </div>
-
-                <h3 class="manrope"> 350 руб./мес  </h3>
-
-            </div>
-
-            <div class="offer_card_container">
-                <div class="offer_card_info">
-                    <div class="manrope offer_card_info_title"> Комфортный </div>
-                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
-                </div>
-
-                <div style="padding:30px;">
-                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
-                                                        height="40px" alt="Картинка"/>
-                </div>
-
-                <h3 class="manrope"> 350 руб./мес  </h3>
-
-            </div>
-
-            <div class="offer_card_container">
-                <div class="offer_card_info">
-                    <div class="manrope offer_card_info_title"> Комфортный </div>
-                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
-                </div>
-
-                <div style="padding:30px;">
-                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
-                                                        height="40px" alt="Картинка"/>
-                </div>
-
-                <h3 class="manrope"> 350 руб./мес  </h3>
-
-            </div>
-
-            <div class="offer_card_container">
-                <div class="offer_card_info">
-                    <div class="manrope offer_card_info_title"> Комфортный </div>
-                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
-                </div>
-
-                <div style="padding:30px;">
-                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
-                                                        height="40px" alt="Картинка"/>
-                </div>
-
-                <h3 class="manrope"> 350 руб./мес  </h3>
-
-            </div>
         </div>
 
     </div>

@@ -23,3 +23,6 @@ class OfferInfoForm(forms.ModelForm):
             'adress': 'Адрес',
         }
 
+
+
+
