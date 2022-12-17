@@ -7,7 +7,7 @@ class OfferInfoForm(forms.ModelForm):
     class Meta:
         # переписать таблицу
         model = OfferInfo
-        fields = ['user_id', 'region', 'adress', 'phone_number','city', 'name']
+        fields = ['user_id', 'region', 'adress', 'phone_number','city', 'name', 'tariff_info']
         widgets = {
             'region': forms.Select(attrs={'class': 'input_offer', 'placeholder':'Регион'}),
             'city': forms.Select(attrs={'class': 'input_offer', 'placeholder': 'Город'}),

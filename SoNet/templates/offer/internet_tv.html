@@ -47,7 +47,7 @@
                                                         height="40px" alt="Картинка"/>
                 </div>
 
-                <h3 class="manrope"> {{tariff.price}} </h3>
+                <h3 class="manrope"> {{tariff.price}}  <input  onclick="myFunction()" id = {{tariff.id}} type="checkbox"> </h3>
 
             </div>
             {% endfor %}
@@ -56,7 +56,9 @@
 </div>
 
 
-<div class="form_offer_container">
+<div class="form_offer_container" style="position:absolute;
+                                         top:900px;
+                                         left:300px">
     <div class="manrope offer_title">
             Оформите заявку на подключение
         </div>
@@ -82,27 +84,25 @@
             <div>
                 {{offer_form.city}}
             </div>
-
-        </div>
             <div>
-                {{offer_form.adress}}
-            </div>
 
-            <input  class="submit_button" type="submit" value="Отправить заявку">
+            <h4> Расчет стоимости тарифа:</h4>
+            <select name="tariff_info" onblur="raschitat();" id="id_tariff_info">
+                <option value="Начальный 850 рублей">Начальный</option>
+                <option value="Комфортный 1000 рублей"> Комфортный</option>
+                <option value="Оптимальный 2000 рублей"> Оптимальный</option>
+            </select>
+            <div class="manrope" style="font-size:20px;" id="stoimost"></div>
+        </div>
+        </div>
+
+        <div>
+            {{offer_form.adress}}
+        </div>
+        <input class="submit_button" type="submit" value="Отправить заявку">
     </form>
-<div>
-        <h3> Расчет стоимости тарифа </h3>
-        <select  onblur="raschitat();" id="cvet">
-            <option value="nach">Начальный</option>
-            <option value="comfort"> Комфортный </option>
-            <option value="opti"> Оптимальный </option>
-        </select>
-    <div id="stoimost"></div>
+    <div>
 
+    </div>
 </div>
-
-</div>
-
-</div>
-
 {% endblock %}

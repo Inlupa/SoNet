@@ -24,6 +24,7 @@ class OfferInfo(models.Model):
     city = models.CharField(max_length=100)
     offer_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
+    tariff_info = models.CharField(max_length=100, blank=True, null=True)
 
     class Meta:
         managed = False

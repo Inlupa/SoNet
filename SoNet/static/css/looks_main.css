@@ -6,15 +6,19 @@ html {
     background: #FFFFFF;
 }
 
+
 navbar_header{
     display:flex;
 }
 
 nav_header-container{
+    position: absolute;
     width: 1920px;
     height: 28px;
-    order:0;
+    left: 0px;
+    top: 0px;
 }
+
 
 .manrope_600 a {
 
@@ -38,7 +42,11 @@ nav_header-container{
     padding: 0px;
     gap: 5px;
 
-
+    position: absolute;
+    width: 217px;
+    height: 25px;
+    left: 260px;
+    top: 0px;
 }
 
 .support{
@@ -48,7 +56,11 @@ nav_header-container{
     padding: 0px;
     gap: 20px;
 
-
+    position: absolute;
+    width: 475px;
+    height: 25px;
+    left: 497px;
+    top: 0px;
 
 }
 
@@ -59,12 +71,20 @@ nav_header-container{
     padding: 0px;
     gap: 20px;
 
-
+    position: absolute;
+    width: 193px;
+    height: 19px;
+    right: 260px;
+    top: 0px;
 }
 
 
 .line{
-
+    position: absolute;
+    width: 1920px;
+    height: 1px;
+    left: 0px;
+    top: 27px;
 
     background: #E3EAF1;
 }
@@ -76,12 +96,18 @@ nav_header-container{
 
 .nav-container {
     display:flex;
-
+    position: absolute;
+    width: 1400px;
+    height: 30px;
+    left: 260px;
+    top: 48px;
 }
 
 
 .logo img{
-
+    position: absolute;
+    left: 0px;
+    top: -5px;
 }
 
 .menu{
@@ -91,7 +117,11 @@ nav_header-container{
     padding: 0px;
     gap: 30px;
 
-
+    position: absolute;
+    width: 631px;
+    height: 19px;
+    left: 237px;
+    top: 4px;
 
 }
 
@@ -129,16 +159,23 @@ service_requests{
 
 
 footer{
+    position: absolute;
     width: 1920px;
     height: 415px;
+    left: 0px;
+    top: 3907px;
 
     background: #E3EAF1;
     border-radius: 60px 60px 0px 0px;
-    order:10;
 }
 
 .footer_content{
 
+    position: absolute;
+    width: 1282px;
+    height: 295px;
+    left: 260px;
+    top: 40px;
 }
 
 .menu_footer{
@@ -149,7 +186,11 @@ footer{
     padding: 0px;
     gap: 15px;
 
-
+    position: absolute;
+    width: 335px;
+    height: 225px;
+    left: 0px;
+    top: 70px;
 }
 .footeritem a {
 
@@ -179,6 +220,11 @@ footer{
     padding: 0px;
     gap: 10px;
 
+    position: absolute;
+    width: 335px;
+    height: 146px;
+    left: 473px;
+    top: 70px;
 }
 
 
@@ -232,6 +278,11 @@ footer{
 
 .socials_footer{
 
+    position: absolute;
+    width: 193px;
+    height: 19px;
+    right: 616px;
+    top: 256px;
 }
 
 .socials_footer a{
@@ -248,17 +299,26 @@ footer{
     padding: 0px;
     gap: 10px;
 
-
+    position: absolute;
+    width: 335px;
+    height: 158px;
+    left: 947px;
+    top: 70px;
 }
 
 .footer_button{
-
+   position: absolute;
+   top: 110px;
 }
 
 
 
 .logo{
-
+    position: absolute;
+    width: 134px;
+    height: 34px;
+    left: 0px;
+    top: 0px;
 }
 
 
@@ -269,7 +329,11 @@ footer{
     padding: 0px;
     gap: 10px;
 
-
+    position: absolute;
+    width: 143px;
+    height: 24px;
+    right: 0px;
+    top: 3px;
 
 }
 
@@ -289,19 +353,25 @@ footer{
 
 .slider_container {
 
-
+    position: absolute;
     width: 1920px;
     height: 400px;
-
+    left: 0px;
+    top: 108px;
 
     /* Secondary/Secondary */
 
     background: #1A78CF;
-    order:0;
+
     z-index:-100;
 }
 
 .slider{
+    position: absolute;
+    width: 723px;
+    height: 148px;
+    left: 260px;
+    top: 60px;
 
     font-weight: 400;
     font-size: 54px;
@@ -311,17 +381,32 @@ footer{
     color: #FFFFFF;
 }
 
+
 .banners{
+
+    position: absolute;
+    width: 1400px;
+    height: 348px;
+    left: 260px;
+    top: 376px;
 
     border-radius: 30px;
 
 }
 .card_promotion_1_container{
 
+        position: absolute;
+        width: 690px;
+        height: 348px;
+        left: 0px;
+        top: 0px;
+
         background: linear-gradient(95.43deg, #F5CCFF -6.56%, #FFD8D8 110.48%);
         border-radius: 30px;
         transition:0.2s;
+
         /* Inside auto layout */
+
         flex: none;
         order: 3;
         flex-grow: 0;
@@ -342,6 +427,13 @@ footer{
     align-items: flex-start;
     padding: 0px;
     gap: 20px;
+
+    position: absolute;
+    width: 460px;
+    height: 228px;
+    left: 60px;
+    top: 60px;
+
 
     flex: none;
     order: 1;
@@ -369,6 +461,7 @@ footer{
     width: 400px;
     height: 44px;
 
+
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
@@ -388,6 +481,11 @@ footer{
 
 .card_promotion_2_container
 {
+            position: absolute;
+            width: 690px;
+            height: 348px;
+            left: 710px;
+            top: 0px;
 
             background: linear-gradient(95.43deg, #D5E2FF -6.56%, #E7F3FF 110.48%);
             border-radius: 30px;
@@ -408,20 +506,34 @@ footer{
 }
 
 .about_container{
-
+            position: absolute;
+            width: 1920px;
+            height: 690px;
+            left: 0px;
+            top: 435px;
             /* BG/Light */
             background: #F3F6F9;
             border-radius: 60px;
+
             z-index:-50;
         }
 
 
 .cards{
-
+            position: absolute;
+            width: 1400px;
+            height: 281px;
+            left: 260px;
+            top: 369px;
 }
 
 .card_category_1_container{
 
+            position: absolute;
+            width: 453px;
+            height: 281px;
+            left: 0px;
+            top: 0px;
             transition:0.2s;
 
             background: #03213C;
@@ -436,6 +548,11 @@ footer{
 }
 
 .card_category_2_container{
+            position: absolute;
+            width: 453px;
+            height: 281px;
+            left: 473px;
+            top: 0px;
 
             transition:0.2s;
 
@@ -453,6 +570,13 @@ footer{
 
 
 .card_category_3_container{
+
+            position: absolute;
+            width: 453px;
+            height: 281px;
+            left: 947px;
+            top: 0px;
+
             transition:0.2s;
 
             background: #03213C;
@@ -474,7 +598,13 @@ footer{
             padding: 0px;
             gap: 10px;
 
-            }
+            position: absolute;
+            width: 300px;
+            height: 131px;
+            left: 30px;
+            top: 25px;
+
+}
 
 .cc_content_header{
 
@@ -543,11 +673,21 @@ footer{
 }
 
 .about {
-
+            position: absolute;
+            width: 1400px;
+            height: 418px;
+            left: 260px;
+            top: 1165px;
 }
+
 
 .about_header_container{
 
+position: absolute;
+            width: 238px;
+            height: 49px;
+            left: 581px;
+            top: 0px;
 }
 .about header{
 
@@ -556,6 +696,7 @@ footer{
             line-height: 49px;
             text-align: center;
 
+
             color: #03213C;
 
 }
@@ -563,15 +704,32 @@ footer{
 
 .card_about_container{
 
+    position: absolute;
+    width: 1398px;
+    height: 339px;
+    left: 0px;
+    top: 79px;
 }
 
 .card_about_1_container{
 
-       background: #F3F6F9;
-       border-radius: 30px;
+
+            position: absolute;
+            width: 335px;
+            height: 334px;
+            left: 0px;
+            top: 0px;
+
+            background: #F3F6F9;
+            border-radius: 30px;
 }
 
 .card_about_2_container{
+            position: absolute;
+            width: 335px;
+            height: 334px;
+            left: 355px;
+            top: 0px;
 
             background: #F3F6F9;
             border-radius: 30px;
@@ -598,6 +756,12 @@ footer{
 
 .card_about_3_container{
 
+            position: absolute;
+            width: 335px;
+            height: 334px;
+            left: 710px;
+            top: 0px;
+
             background: #F3F6F9;
             border-radius: 30px;
 }
@@ -605,6 +769,11 @@ footer{
 
 .card_about_4_container{
 
+            position: absolute;
+            width: 335px;
+            height: 334px;
+            left: 1065px;
+            top: 0px;
 
             background: #F3F6F9;
             border-radius: 30px;
@@ -655,10 +824,20 @@ footer{
 
 .more {
 
+        position: absolute;
+        width: 1400px;
+        height: 573px;
+        left: 260px;
+        top: 1663px;
 
 }
 .more_header_container{
 
+    position: absolute;
+    width: 842px;
+    height: 49px;
+    left: 279px;
+    top: 0px;
 
 }
 .more header{
@@ -676,9 +855,19 @@ footer{
     padding: 0px;
     gap: 20px;
 
+    position: absolute;
+    width: 1400px;
+    height: 494px;
+    left: 0px;
+    top: 79px;
 }
 
 .pic_more{
+    position: absolute;
+    width: 335px;
+    height: 405px;
+    left: 0px;
+    top: 0px;
     background: url('../img/more1.png');
     order: 0;
 }
@@ -740,7 +929,7 @@ footer{
 }
 
 .zoom{
-            width: 335px;
+             width: 335px;
             height: 405px;
             overflow: hidden;
             margin: 0 auto;
@@ -794,6 +983,11 @@ footer{
 }
 
 .connection{
+    position: absolute;
+    width: 1400px;
+    height: 267px;
+    left: 260px;
+    top: 2316px;
 
     background: #1A78CF;
     border-radius: 30px;
@@ -805,6 +999,12 @@ footer{
     align-items: flex-start;
     padding: 0px;
     gap: 15px;
+
+    position: absolute;
+    width: 509px;
+    height: 147px;
+    left: 60px;
+    top: 60px;
 }
 
 .connection_header{
@@ -838,7 +1038,11 @@ footer{
 }
 
 .news{
-
+    position: absolute;
+    width: 1920px;
+    height: 890px;
+    left: 0px;
+    top: 3143px;
 
     background: #F3F6F9;
     border-radius: 60px;
@@ -852,6 +1056,8 @@ footer{
     padding: 40px 60px 40px 130px;
     gap: 40px;
 
+    position: absolute;
+    width: 926px;
 
     left: 450px;
     top: 2663px;
@@ -887,6 +1093,11 @@ footer{
     padding: 0px;
     gap: 20px;
 
+    position: absolute;
+    width: 1399px;
+    height: 644px;
+    left: 260px;
+    top: 119px;
 }
 
 .news_content{
@@ -942,7 +1153,11 @@ footer{
 }
 
 .news_nav{
-
+        position: absolute;
+        width: 334px;
+        height: 48px;
+        left: 260px;
+        top: 40px;
 }
 .last_news{
     display: flex;
@@ -959,6 +1174,12 @@ footer{
 
     flex: none;
     flex-grow: 0;
+
+    position: absolute;
+    width: 375px;
+    height: 49px;
+    left: 0px;
+    top: 0px;
 }
 
 .accordion{
@@ -981,7 +1202,7 @@ footer{
     .accordion__header {
 
 
-      width:806px;
+        width:806px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -1054,22 +1275,23 @@ footer{
    /* стили для услуг*/
 
 .offer_container{
-
+        position: absolute;
+        width: 1920px;
+        left: 0px;
+        top: 303px;
         min-height: 450px;
         margin: 0 auto;
         /* BG/Light */
 
         background: #F3F6F9;
         border-radius: 60px
-        order:1;
         }
-
 .offer{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-    padding: 30px 260px;
+    padding: 30px 260px ;
 }
 
 .nav_offer{
@@ -1118,9 +1340,9 @@ footer{
     color: #03213C;
 
     flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+      order: 1;
+      align-self: stretch;
+      flex-grow: 0;
 }
 
 
@@ -1168,7 +1390,8 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 30px 0 0 30px ;
+        padding: 30px 0 30px 0 ;
+        margin: 0 0 0 20px;
         gap: 10px;
 }
 
@@ -1185,6 +1408,7 @@ footer{
 }
 
 
+
 .offer_card_info_text{
     font-weight: 400;
     font-size: 12px;
@@ -1196,7 +1420,6 @@ footer{
     align-self: stretch;
     flex-grow: 0;
 }
-
 .form_offer_container{
     order:2;
 }

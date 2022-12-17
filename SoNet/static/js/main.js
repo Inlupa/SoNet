@@ -178,15 +178,15 @@ new Swiper('.image-slider',{
 
 
 function raschitat() {
-    cvet  = document.getElementById('cvet').value;
+    cvet  = document.getElementById('id_tariff_info').value;
     switch (cvet) {
-       case "nach":
+       case "Начальный 850 рублей":
           cena = 0;
           break
-       case "comfort":
+       case "Комфортный 1000 рублей":
           cena = 350;
           break
-        case "opti":
+        case "Оптимальный 2000 рублей":
           cena = 150;
           break
        default:
