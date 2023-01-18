@@ -1,7 +1,5 @@
 html {
     position: relative;
-    width: 1920px;
-    height: 4322px;
 
     background: #FFFFFF;
 }
@@ -12,11 +10,7 @@ navbar_header{
 }
 
 nav_header-container{
-    position: absolute;
-    width: 1920px;
-    height: 28px;
-    left: 0px;
-    top: 0px;
+
 }
 
 

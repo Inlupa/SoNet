@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 
 class LoginForm(forms.Form):
 
-    username = forms.CharField(label='Логин', widget=forms.TextInput(attrs={'class': 'form-control input_form','placeholder':' Имя пользователя'}))
-    password = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'form-control input_form','placeholder':' Пароль'}))
+    username = forms.CharField(label='Логин', widget=forms.TextInput(attrs={'class': 'form-control input_form_login','placeholder':' Имя пользователя'}))
+    password = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'form-control input_form_login','placeholder':' Пароль'}))
 
 class UserRegistrationForm(forms.ModelForm):
     username = forms.CharField(label='Username', widget=forms.TextInput(attrs={'class': 'form-control input_form', 'placeholder': ' Логин'}))
