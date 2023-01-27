@@ -60,4 +60,4 @@ def hosting(request):
         offer_form = OfferInfoForm(request.POST)
         if offer_form.is_valid():
             offer_form.save()
-    return render(request,'offer/hosting.html', context={'offer_form':offer_form})
+    return render(request,'offer/hosting_1.html', context={'offer_form':offer_form})

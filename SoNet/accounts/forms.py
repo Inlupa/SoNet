@@ -7,11 +7,11 @@ class LoginForm(forms.Form):
     password = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'form-control input_form_login','placeholder':' Пароль'}))
 
 class UserRegistrationForm(forms.ModelForm):
-    username = forms.CharField(label='Username', widget=forms.TextInput(attrs={'class': 'form-control input_form', 'placeholder': ' Логин'}))
-    first_name = forms.CharField(label='Name', widget=forms.TextInput(attrs={'class': 'form-control input_form', 'placeholder': ' Ваше имя'}))
-    email = forms.CharField(label='Name', widget=forms.TextInput(attrs={'class': 'form-control input_form', 'placeholder': 'E-mail'}))
-    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class': 'form-control input_form', 'placeholder':' Пароль'}))
-    password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput(attrs={'class': 'form-control input_form', 'placeholder':' Введите повторный пароль'}))
+    username = forms.CharField(label='Username', widget=forms.TextInput(attrs={'class': 'form-control input_form_login', 'placeholder': ' Логин'}))
+    first_name = forms.CharField(label='Name', widget=forms.TextInput(attrs={'class': 'form-control input_form_login', 'placeholder': ' Ваше имя'}))
+    email = forms.CharField(label='Name', widget=forms.TextInput(attrs={'class': 'form-control input_form_login', 'placeholder': 'E-mail'}))
+    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'class': 'form-control input_form_login', 'placeholder':' Пароль'}))
+    password2 = forms.CharField(label='Repeat password', widget=forms.PasswordInput(attrs={'class': 'form-control input_form_login', 'placeholder':' Введите повторный пароль'}))
 
     class Meta:
         model = User

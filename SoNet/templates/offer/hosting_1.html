@@ -1,0 +1,366 @@
+{% extends "base.html" %}
+{% block title %} Вход {% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="slider_container">
+    <header class="slider manrope">
+        Заявка на подключение
+    </header>
+</div>
+<div class="nav_offer">
+    <a href="/offer/internet+tv" class="nav_offer_block manrope"> Интернет + ТВ </a>
+    <a href="/offer/internet" class="nav_offer_block manrope"> Интернет </a>
+    <a href="/offer/tv" class="nav_offer_block manrope"> ТВ </a>
+    <a href="/offer/hosting" class="nav_offer_block manrope"> Хостинг </a>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="section__tabs tabs">
+            <div class="tabs__head">
+                <div class="tabs__caption manrope" data-tab="home"> Конфигурация сервера</div>
+                <div class="tabs__caption manrope" data-tab="portfolio"> Готовые сервера</div>
+
+            </div>
+            <div class="tabs__body">
+                <div class="tabs__content" data-tab="home">
+
+                    <div class="offer_container">
+
+                        <div class="offer">
+
+
+                            <div class="offer_name manrope">
+                                Хостинг услуги
+                            </div>
+
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 15px;
+                    order:2">
+                                <select name="tariff_info">
+                                    <option value="Аренда физического сервера"> Аренда физического сервера</option>
+                                    <option value="Аренда стойко сервера"> Аренда стойко сервера</option>
+
+                                </select>
+                            </div>
+                            <div class="manrope offer_title">
+                                Выберите конфигурацию сервера
+                            </div>
+                            <h4 style="order:3; color:black;" class="manrope"> Расположение:</h4>
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 15px;
+                    order:4">
+                                <select name="tariff_info">
+                                    <option value="Московская область"> Московская область</option>
+                                    <option value="Ленинградская область"> Ленинградская область</option>
+                                    <option value="Калужская область"> Калужская область</option>
+                                </select>
+
+                                <select name="tariff_info">
+                                    <option value="Московская область"> MSK-2</option>
+                                </select>
+                            </div>
+
+                            <h4 style="order:5; color:black;" class="manrope"> Конфигурация:</h4>
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 15px;
+                    order:6">
+                                <select name="tariff_info">
+                                    <option value="Московская область"> Московская область</option>
+                                    <option value="Ленинградская область"> Ленинградская область</option>
+                                    <option value="Калужская область"> Калужская область</option>
+                                </select>
+
+                                <select name="tariff_info">
+                                    <option value="Московская область"> Московская область</option>
+                                    <option value="Ленинградская область"> Ленинградская область</option>
+                                    <option value="Калужская область"> Калужская область</option>
+                                </select>
+                            </div>
+
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 15px;
+                    order:7">
+                                <select name="tariff_info">
+                                    <option value="Московская область"> Московская область</option>
+                                    <option value="Ленинградская область"> Ленинградская область</option>
+                                    <option value="Калужская область"> Калужская область</option>
+                                </select>
+
+                                <select name="tariff_info">
+                                    <option value="Московская область"> Московская область</option>
+                                    <option value="Ленинградская область"> Ленинградская область</option>
+                                    <option value="Калужская область"> Калужская область</option>
+                                </select>
+                            </div>
+
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 0px;
+                    gap: 15px;
+                    order:7">
+                                <select name="tariff_info">
+                                    <option value="Московская область"> Московская область</option>
+                                    <option value="Ленинградская область"> Ленинградская область</option>
+                                    <option value="Калужская область"> Калужская область</option>
+                                </select>
+
+                                <select name="tariff_info">
+                                    <option value="Московская область"> Московская область</option>
+                                    <option value="Ленинградская область"> Ленинградская область</option>
+                                    <option value="Калужская область"> Калужская область</option>
+                                </select>
+                            </div>
+                            <h4 style="order:8; color:black" class="manrope"> Операционная система:</h4>
+                        </div>
+
+                        <div class="form_offer_container">
+                            <div class="manrope offer_title">
+                                Оформите заявку на подключение
+                            </div>
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form_offer">
+                                    <div>
+                                        {{offer_form.user_id}}
+                                    </div>
+
+                                    <div>
+                                        {{offer_form.name}}
+                                    </div>
+
+                                    <div>
+                                        {{offer_form.phone_number}}
+                                    </div>
+
+                                    <div>
+                                        {{offer_form.region}}
+                                    </div>
+
+                                    <div>
+                                        {{offer_form.city}}
+                                    </div>
+
+                                </div>
+                                <div>
+                                    {{offer_form.adress}}
+                                </div>
+
+                                <input class="submit_button" type="submit" value="Отправить заявку">
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="tabs__content" data-tab="portfolio">
+                    <div style="margin:0 0 0 350px">
+                            <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
+                            <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
+                            <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
+                            <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
+                            <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
+                            <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
+                    </div>
+                    <div class="form_offer_container">
+                        <div class="manrope offer_title">
+                            Оформите заявку на подключение
+                        </div>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form_offer">
+                                <div>
+                                    {{offer_form.user_id}}
+                                </div>
+
+                                <div>
+                                    {{offer_form.name}}
+                                </div>
+
+                                <div>
+                                    {{offer_form.phone_number}}
+                                </div>
+
+                                <div>
+                                    {{offer_form.region}}
+                                </div>
+
+                                <div>
+                                    {{offer_form.city}}
+                                </div>
+
+                            </div>
+                            <div>
+                                {{offer_form.adress}}
+                            </div>
+
+                            <input class="submit_button" type="submit" value="Отправить заявку">
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+
+
+.tabs {
+  overflow: hidden;
+  border-radius: 15px;
+}
+.tabs__head {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.tabs__caption {
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 8px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  opacity: 0.6;
+  background:  #8CC628;
+  transition: 0.25s;
+}
+.tabs__caption:hover {
+  opacity: 0.8;
+}
+.tabs__caption_active {
+  opacity: 1;
+  background: #8CC628;
+}
+.tabs__body {
+  background: var(--primary);
+  position: relative;
+  top: -2px;
+  transition: 0.25s;
+}
+.tabs__content {
+  display: none;
+  color: var(--color);
+  transform: scaleY(0.8);
+  opacity: 0;
+  transform-origin: center top;
+  -webkit-animation: showContent 0.6s forwards;
+  animation: showContent 0.6s forwards;
+}
+.tabs__content_active {
+  display: block;
+}
+.section {
+  --primary: #F3F6F9;
+  --color: #fff;
+  padding: 15px 0;
+}
+.about {
+  padding: 15px 0;
+  --primary: #8cff98;
+  --color: #121212;
+}
+@-webkit-keyframes showContent {
+  0% {
+    transform: scaleY(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes showContent {
+  0% {
+    transform: scaleY(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => { // Структура страницы загружена и готова к взаимодействию
+
+  const tabs = () => { // объявляем основную функцию для вкладок, чтобы вся логика была в одном месте
+    const head = document.querySelector('.tabs__head') // ищем элемент с кнопками и записываем в константу
+    const body = document.querySelector('.tabs__body') // ищем элемент с контентом и записываем в константу
+
+    const getActiveTabName = () => { // объявляем функцию для получения названия активной вкладки
+      return head.querySelector('.tabs__caption_active').dataset.tab // возвращаем значение data-tab активной кнопки
+    }
+
+    const setActiveContent = () => { // объявляем функцию для установки активного элемента контента
+      if (body.querySelector('.tabs__content_active')) { // если уже есть активный элемент контента
+        body.querySelector('.tabs__content_active').classList.remove('tabs__content_active') // то скрываем его
+      }
+      body.querySelector(`[data-tab=${getActiveTabName()}]`).classList.add('tabs__content_active') // затем ищем элемент контента, у которого значение data-tab совпадает со значением data-tab активной кнопки и отображаем его
+    }
+
+    // проверяем при загрузке страницы, есть ли активная вкладка
+    if (!head.querySelector('.tabs__caption_active')) {  // если активной вкладки нет
+      head.querySelector('.tabs__caption').classList.add('tabs__caption_active') // то делаем активной по-умолчанию первую вкладку
+    }
+
+    setActiveContent(getActiveTabName()) // устанавливаем активный элемент контента в соответствии с активной кнопкой при загрузке страницы
+
+    head.addEventListener('click', e => { // при клике на .tabs__head
+      const caption = e.target.closest('.tabs__caption') // узнаем, был ли клик на кнопке
+      if (!caption) return // если клик был не на кнопке, то прерываем выполнение функции
+      if (caption.classList.contains('tabs__caption_active')) return // если клик был на активной кнопке, то тоже прерываем выполнение функции и ничего не делаем
+
+      if (head.querySelector('.tabs__caption_active')) { // если уже есть активная кнопка
+        head.querySelector('.tabs__caption_active').classList.remove('tabs__caption_active') // то удаляем ей активный класс
+      }
+
+      caption.classList.add('tabs__caption_active') // затем добавляем активный класс кнопке, на которой был клик
+
+      setActiveContent(getActiveTabName()) // устанавливаем активный элемент контента в соответствии с активной кнопкой
+    })
+  }
+
+  tabs() // вызываем основную функцию
+
+})
+
+
+
+
+
+</script>
+{% endblock %}

@@ -1,35 +1,100 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title> Вход в личный кабинет </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-{% block title %}Create an account {% endblock %}
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
-{% block content %}
-<div class="flex flex-horizontal-center">
-    <h1> Пожалуйста зарегистрируйте аккаунт :</h1>
-</div>
-<form  action="." method="post">
+    <link rel='stylesheet' href="{% static 'css/looks_main.css' %}">
+    <link rel='stylesheet' href="{% static 'css/new_classes.css' %}">
+    <link rel='stylesheet' href="{% static 'css/buttons.css' %}">
+    <link rel='stylesheet' href="{% static 'css/footer.css' %}">
+    <link rel='stylesheet' href="{% static 'css/header.css' %}">
 
-    <div class="container_form">
-        <div>
-            {{ user_form.username}}
-        </div>
-        <div>
-            {{ user_form.first_name}}
-        </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-        <div>
-            {{ user_form.password}}
-        </div>
-        <div>
-            {{ user_form.password2}}
-        </div>
-        <div>
-            {{ user_form.email}}
-        </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<style>
+.login_wrapper{
+    margin:0 auto;
+}
+.login_form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px;
+
+            gap:20px;
+            width: 453px;
+            height: 423px;
+
+            /* BG/Light */
+            background: #F3F6F9;
+            border-radius: 30px;
+        }
+.login_title{
+            margin: 260px 0 0 0;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 49px;
+
+            color: #03213C;
+}
+
+.input_form_login{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+
+        width: 393px;
+        height: 47px;
+
+        background: #FFFFFF;
+        border-radius: 4px;
+
+        flex: none;
+        align-self: stretch;
+        flex-grow: 0;
+}
+</style>
+<body>
+<div class="login_wrapper">
+    <div class="login_title manrope"> Пожалуйста зарегистрируйте аккаунт </div>
+
+
+        <h2 class="manrope" > Вход </h2>
+        <form action="." method="post" >
+            <div class="login_form">
+            <div>
+                {{ user_form.username}}
+            </div>
+            <div>
+                {{ user_form.first_name}}
+            </div>
+
+            <div>
+                {{ user_form.password}}
+            </div>
+            <div>
+                {{ user_form.password2}}
+            </div>
+            <div>
+                {{ user_form.email}}
+            </div>
+            </div>
+            <div class="Button_small_blue" style="margin:10px 0;">
+                <a class="submit_button" type="submit" > Зарегистрировать </a>
+            </div>
+            {% csrf_token %}
+        </form>
+
     </div>
-
-    <div class="flex flex-horizontal-center">
-         <input class="submit_button" type="submit" value="Создать аккаунт">
-    </div>
-    {% csrf_token %}
-</form>
-{% endblock %}
+`
+</body>
+</html>
