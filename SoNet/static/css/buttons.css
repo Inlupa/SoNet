@@ -168,7 +168,6 @@ input:focus + .slider1 {
 }
 
 input:checked + .slider1:before {
-
    content: "Квартира";
   -webkit-transform: translateX(65px);
   -ms-transform: translateX(65px);

@@ -17,87 +17,89 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body class="all_wrapper">
-<header>
-<nav class="navbar_header">
-    <ul class="nav_header-container">
+<div>
+    <div class="navbar_header">
         <div class="location manrope_600">
-            <li class="navitem flex "><a href="#"> <img src="{% static 'img/location_logo.png' %}" width="16px"
-                                                        height="16px" alt="Картинка"/> Вы в Москве </a></li>
+            <div class="navitem flex "><a href="#"> <img src="{% static 'img/location_logo.png' %}" width="16px"
+                                                         height="16px" alt="Картинка"/> Вы в Москве </a></div>
         </div>
-
         <div class="support manrope_600">
-            <li class="flex "><a href="#"> Техническая поддержка </a></li>
-            <li class="flex "><a href="#"> +7(499)404-04-71 </a></li>
-            <li class="flex "><a href="#"> info@sonet.ru </a></li>
+            <div class="flex "><a href="#"> Техническая поддержка </a></div>
+            <div class="flex "><a href="#"> +7(499)404-04-71 </a></div>
+            <div class="flex "><a href="#"> info@sonet.ru </a></div>
         </div>
-
-
         <div class="social_media manrope_600">
-            <li class="navitem flex ">
+
+            <div class="navitem flex ">
                 <a href="#">
-                    <img src="{% static 'img/Telegram_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Telegram
-                </a></li>
-            <a href="#">
-                <img src="{% static 'img/Whatsapp_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Whatsapp
-            </a></li>
-        </div>
-    </ul>
-</nav>
-<div class="line"></div>
-
-<nav class="navbar">
-    <ul class="nav-container">
-        <div class="logo ">
-            <li class="navitem flex "><a href="/"> <img src="{% static 'img/main_logo.png' %}"   width="155.19px"
-                                                        height="38.82px" alt="Картинка"/> </a></li>
-        </div>
-        <div class="menu">
-            <li class="menuitem  flex "><a href="/offer/internet" class="manrope"> Интернет </a></li>
-            <li class="menuitem  flex "><a href="/offer/tv" class="manrope"> Телевидение</a></li>
-            <li class="menuitem  flex "><a href="/offer/hosting" class="manrope"> Хостинг услуги </a></li>
-            <li class="menuitem  flex "><a href="#" class="manrope"> Обслуживание </a>
-            <li class="menuitem  flex "><a href="#" class="manrope"> Абонентам </a></li>
-            <li class="menuitem  flex "><a href="#" class="manrope"> Новости </a></li>
-            <li class="menuitem  flex "><a href="#" class="manrope"> О провайдере </a></li>
-        </div>
-
-        <div class="">
-            <li class="navitem flex Button_small_blue" style="
-                        width: 151px;
-                        height: 35px;
-                        right: 173px;
-                        top: -3px;">
-                <a href="#"> Заявка на услуги </a></li>
-        </div>
-
-        <div class="accounts manrope">
-            <li class="navitem flex ">
-                <a href="/login">
-                    <img src="{% static 'img/account_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Личный
-                    кабинет
-                </a></li>
-        </div>
-    </ul>
-</nav>
-
-</header>
-<div class="inside_base"> {% block content %}{% endblock %}</div>
-
-<footer>
-        <div class="footer_content">
-            <div class="logo_footer ">
-                <img src="{% static 'img/main_logo.png' %}" width="155.19px" height="38.82px" alt="Картинка"/>
+                    <img src="{% static 'img/Telegram_logo.png' %}" width="18px" height="18px" alt="Картинка"/>
+                    Telegram
+                </a>
             </div>
 
-            <ul class="menu_footer">
+            <div class="navitem flex">
+                <a href="#">
+                    <img src="{% static 'img/Whatsapp_logo.png' %}" width="18px" height="18px" alt="Картинка"/>
+                    Whatsapp
+                </a>
+            </div>
+        </div>
+    </div>
 
-                <li class="footeritem  flex "><a href="#" class="manrope"> Интернет </a></li>
-                <li class="footeritem  flex "><a href="#" class="manrope"> Телевидение</a></li>
-                <li class="footeritem  flex "><a href="#" class="manrope"> Хостинг услуги </a></li>
-                <li class="footeritem  flex "><a href="#" class="manrope"> Абонентам </a></li>
-                <li class="footeritem flex "><a href="#" class="manrope"> Новости </a></li>
-                <li class="footeritem  flex "><a href="#" class="manrope"> О провайдере </a></li>
-            </ul>
+    <div class="line"></div>
+
+    <div class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="navitem flex ">
+                    <a href="/"> <img src="{% static 'img/main_logo.png' %}" width="155.19px"
+                                      height="38.82px" alt="Картинка"/>
+                    </a>
+                </div>
+            </div>
+            <div class="menu manrope">
+                <div class="menuitem  flex "><a href="/offer/internet" class="manrope"> Интернет </a></div>
+                <div class="menuitem  flex "><a href="/offer/tv" class="manrope"> Телевидение</a></div>
+                <div class="menuitem  flex "><a href="/offer/hosting" class="manrope"> Хостинг услуги </a></div>
+                <div class="menuitem  flex "><a href="#" class="manrope"> Обслуживание </a></div>
+                <div class="menuitem  flex "><a href="#" class="manrope"> Абонентам </a></div>
+                <div class="menuitem  flex "><a href="#" class="manrope"> Новости </a></div>
+                <div class="menuitem  flex "><a href="#" class="manrope"> О провайдере </a></div>
+            </div>
+            <div>
+                <div class="navitem flex Button_small_blue">
+                    <a href="#"> Заявка на услуги </a>
+                </div>
+            </div>
+            <div class="accounts manrope">
+                <div class="navitem flex ">
+                    <a href="/login">
+                        <img src="{% static 'img/account_logo.png' %}" width="18px" height="18px" alt="Картинка"/>
+                        Личный кабинет
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="inside_base"> {% block content %}{% endblock %} </div>
+
+    <footer>
+        <div class="footer_content">
+
+            <div class="menu_footer">
+
+                <div class="logo_footer ">
+                        <img src="{% static 'img/main_logo.png' %}" width="155.19px" height="38.82px" alt="Картинка"/>
+                </div>
+
+                <div class="footeritem  flex "><a href="#" class="manrope"> Интернет </a></div>
+                <div class="footeritem  flex "><a href="#" class="manrope"> Телевидение</a></div>
+                <div class="footeritem  flex "><a href="#" class="manrope"> Хостинг услуги </a></div>
+                <div class="footeritem  flex "><a href="#" class="manrope"> Абонентам </a></div>
+                <div class="footeritem flex "><a href="#" class="manrope"> Новости </a></div>
+                <div class="footeritem  flex "><a href="#" class="manrope"> О провайдере </a></div>
+            </div>
 
             <ul class="help_footer">
 
@@ -107,28 +109,34 @@
                 </li>
                 <li class="footer_help_number  flex manrope"> +7(499) 404-04-71</li>
                 <li class="footer_help_email  flex manrope "> sales@selectel.ru</li>
+
+                <div class="socials_footer">
+                <a class="manrope" href="#">
+                    <img src="{% static 'img/Telegram_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Telegram
+                </a>
+                <a class="manrope" href="#">
+                    <img src="{% static 'img/Whatsapp_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Whatsapp
+                </a>
+            </div>
+
             </ul>
 
-            <div class="socials_footer">
-                        <a  class="manrope" href="#">
-                            <img src="{% static 'img/Telegram_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Telegram
-                        </a>
-                    <a  class="manrope" href="#">
-                        <img src="{% static 'img/Whatsapp_logo.png' %}" width="18px" height="18px" alt="Картинка"/> Whatsapp
-                    </a>
-            </div>
+
 
             <ul class="news_footer">
                 <li class="footer_help_header  flex "><a href="#" class="manrope primary"> Новости </a></li>
-                <li class="footer_help_text  flex "><a href="#" class="manrope primary"> Присоединяйтесь — нам есть о чем рассказать: запускаем новые продукты, проводим мероприятия и акции.</a></li>
-                <li class="footer_button flex Button_border_primary"><a class="manrope" href="#"> Подписаться на рассылку </a></li>
+                <li class="footer_help_text  flex "><a href="#" class="manrope primary"> Присоединяйтесь — нам есть о
+                    чем
+                    рассказать: запускаем новые продукты, проводим мероприятия и акции.</a></li>
+                <li class="footer_button flex Button_border_primary"><a class="manrope" href="#"> Подписаться на
+                    рассылку </a></li>
             </ul>
 
-    </div>
-</footer>
+        </div>
+    </footer>
 
-<script src="{% static 'js/main.js' %}"></script>
-<script src="{% static 'js/ajax.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/ajax.js' %}"></script>
 </body>
 </html>
 

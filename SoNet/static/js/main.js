@@ -125,6 +125,7 @@ new Swiper('.image-slider',{
         }
         elBody.style['display'] = 'block';
         const height = elBody.offsetHeight;
+
         elBody.style['height'] = 0;
         elBody.style['overflow'] = 'hidden';
         elBody.style['transition'] = `height ${this._config.duration}ms ease`;

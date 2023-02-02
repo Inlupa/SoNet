@@ -90,11 +90,8 @@
                 <div class="cc_content_small manrope">
                     Предложение действует с 19.07.2022 по 31.12.2022.
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </section>
 
@@ -113,38 +110,25 @@
                 </div>
             </div>
 
-
             <div class="ca_content_container manrope">
                 <article class="ca_content_header manrope"> Наши преимущества</article>
                 <div class="ca_content_main manrope">
-
                     <ul>
-
                         <li> Cтандарту надежности Tier III;</li>
                         <li> Cертификат безопасности PCI DSS;</li>
                         <li> Бесплатная техподдержка.</li>
-
                     </ul>
-
-
                 </div>
-
             </div>
 
 
-
             <div class="ca_content_container manrope">
-
-                <article class="ca_content_header manrope"> Храним данные по 152-ФЗ</article>
+                <article class="ca_content_header manrope"> Храним данные по 152-ФЗ </article>
                 <div class="ca_content_main manrope"> Наша инфраструктура соответствует 152-ФЗ. Это значит, что все
                     данные мы храним и обрабатываем по закону. Вы можете гарантировать своим клиентам сохранность личной
                     информации.
                 </div>
-
-
             </div>
-
-
 
             <div class="ca_content_container manrope">
                 <article class="ca_content_header manrope"> Техническая поддержка 24/7/365 </article>
@@ -165,7 +149,7 @@
     </div>
 
     <div class="card_more_container">
-        <div class="card_more_1_container">
+        <div class="card_more">
             <div class="cm_content_container manrope">
 
                 <div class="pic_more1 zoom">
@@ -180,7 +164,7 @@
             </div>
         </div>
 
-        <div class="card_more_2_container">
+        <div class="card_more">
             <div class="cm_content_container manrope">
 
                 <div class="pic_more2 zoom ">
@@ -195,7 +179,7 @@
             </div>
         </div>
 
-        <div class="card_more_3_container">
+        <div class="card_more">
             <div class="cm_content_container manrope">
 
                 <div class="pic_more3 zoom">
@@ -211,7 +195,7 @@
             </div>
         </div>
 
-        <div class="card_more_4_container">
+        <div class="card_more">
             <div class="cm_content_container manrope">
 
                 <div class="pic_more4 zoom">
@@ -225,6 +209,9 @@
         </div>
     </div>
 </section>
+<div style="display: flex;
+    align-items: center;
+    justify-content: center;">
 
 <section class="connection">
     <text>
@@ -237,9 +224,12 @@
 
     </text>
 </section>
+</div>
+<div style="display: flex;
+    align-items: center;
+    justify-content: center;">
 
 <section class="que">
-
 <div id="accordion" class="accordion">
 
         <div class="que_header manrope"> Часто задаваемые вопросы </div>
@@ -301,23 +291,9 @@
 
   </div>
 </section>
-
+</div>
 <section class="news">
-
 {% block pagination %}
-    <!--<p>
-        Current Page: <b id="current"> {{page_obj.number}} </b>
-    </p>-->
-
-    <!--<nav>
-        <a href=# id="prev">
-
-        </a>
-        <a href=# id="next">
-
-        </a>
-    </nav>-->
-
 <div class="news_cards">
 {% for contact in page_obj %}
 
@@ -347,11 +323,8 @@
     {% endfor %}
 </div>
 
-
 {% endblock %}
 
 </section>
-
-
 
 {% endblock %}
