@@ -7,10 +7,12 @@ html {
 /* это все дальше хедер */
 
 .navbar_header{
-    width:100%;
+    width:99%;
 
     display: flex;
     flex-direction: row;
+
+    justify-content: space-between;
     padding: 10px;
     gap: 100px;
 }
@@ -29,6 +31,7 @@ html {
 .location {
     display: flex;
     flex-direction: row;
+    align-items: stretch;
     padding: 0px;
     gap: 5px;
     order:1;
@@ -37,7 +40,7 @@ html {
 .support{
     display: flex;
     flex-direction: row;
-
+    align-items: stretch;
     padding: 0px;
     gap: 20px;
     order:2;
@@ -46,7 +49,7 @@ html {
 .social_media{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+
     padding: 0px;
     gap: 20px;
 
@@ -64,15 +67,11 @@ html {
 
 .nav-container {
     width:100%;
-
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
-    gap: 200px;
-}
-
-.logo img{
-
+    gap:10px;
 }
 
 .menu{
@@ -83,18 +82,13 @@ html {
     gap: 30px;
 }
 
-.menuitem {
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-}
 
-        @font-face {
-          font-family: 'Manrope';;
-          src: local("../fonts/Manrope-Regular.ttf"), url("../fonts/Manrope-Regular.ttf") format("truetype");
-          font-weight: 400;
-          font-style: normal;
-        }
+@font-face {
+   font-family: 'Manrope';;
+   src: local("../fonts/Manrope-Regular.ttf"), url("../fonts/Manrope-Regular.ttf") format("truetype");
+   font-weight: 400;
+   font-style: normal;
+}
 
 
 .menuitem a {
@@ -112,9 +106,7 @@ html {
 }
 
 service_requests{
-
 }
-
 /* хедер закончился */
 
 /* это все дальше футер */
@@ -145,14 +137,14 @@ footer{
 }
 .footeritem a {
 
-        width: 100%;
-        height: 25px;
+   width: 100%;
+   height: 25px;
 
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 25px;
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 25px;
 
-        color: #03213C;
+   color: #03213C;
 }
 
 .footeritem a:hover {
@@ -221,15 +213,9 @@ footer{
     color: #03213C;
 }
 
-
-.socials_footer{
-
-}
-
 .socials_footer a{
 
     color: #979FA7;
-
 }
 
 .news_footer{
@@ -241,14 +227,8 @@ footer{
     margin:50px 0 0 0;
     gap: 10px;
 
-
 }
-.footer_button{
 
-}
-.logo{
-
-}
 .accounts{
     display: flex;
     flex-direction: row;
@@ -274,7 +254,7 @@ footer{
 
 .slider_container {
 
-    max-width: 100%;
+    display:flex;
     height: 400px;
 
     /* Secondary/Secondary */
@@ -284,6 +264,7 @@ footer{
 }
 
 .slider{
+    display:flex;
     padding:100px;
     font-weight: 400;
     font-size: 54px;
@@ -296,27 +277,23 @@ footer{
     border-radius: 30px;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
 
     align-items: center;
     justify-content: center;
-
+    position:relative;
+    top:-50px;
     padding: 0px;
-    margin:-50px 0 50px 0px;
-    gap: 20px;
 
+    gap: 20px;
 }
 .card_promotion_container{
-        min-width:420px;
-        max-width:50%;
+        max-width:550px;
 
         display: flex;
-        padding:60px 120px;
+        padding:30px 60px;
         background: linear-gradient(95.43deg, #F5CCFF -6.56%, #FFD8D8 110.48%);
         border-radius: 30px;
         transition:0.2s;
-        /* Inside auto layout */
-        flex-grow: 0;
         z-index: 0;
 }
 
@@ -335,7 +312,6 @@ footer{
     gap: 20px;
 
     order: 1;
-    flex-grow: 0;
     z-index: 2;
 }
 
@@ -350,11 +326,10 @@ footer{
         color: #03213C;
 
         order: 0;
-        flex-grow: 0;
+        flex-grow: 1;
 }
 
 .cp_content_main{
-
     width: 100%;
     max-height:44px;
 
@@ -363,39 +338,32 @@ footer{
     line-height: 22px;
     color: #03213C;
 
-    flex: none;
     order: 1;
-    flex-grow: 0;
 }
 
 .cp_content_button{
-
-        flex: none;
         order: 2;
-        flex-grow: 0;
 }
 
 .about_container{
-
-            /* BG/Light */
-            background: #F3F6F9;
-            border-radius: 60px;
-            z-index:-50;
-        }
+    margin:-50px 0 50px 0px;
+    background: #F3F6F9;
+    border-radius: 60px;
+    z-index:-50;
+}
 
 .cards{
     display: flex;
 
     align-items: center;
     justify-content: center;
-
+    padding: 0 0 35px 0;
     flex-direction: row;
     gap: 20px;
 }
 
 .card_category_container{
-     max-width: 600px;
-     min-width:400px;
+     width:480px;
      height: 281px;
 
      transition:0.2s;
@@ -411,97 +379,77 @@ footer{
 
 .cc_content_container{
 
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 50px;
-            gap: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 50px;
+   gap: 10px;
 }
 
 .cc_content_header{
+   width: 100%;
+   height: 33px;
 
-            width: 100%;
-            height: 33px;
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 33px;
 
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 33px;
-
-            color: #FFFFFF;
-
-            flex: none;
-            order: 0;
-            flex-grow: 0;
+   color: #FFFFFF;
+   order: 0;
 }
 
 .cc_content_main{
-            width: 100%;
-            max-height: 50px;
+    width: 100%;
+    max-height: 50px;
 
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 25px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
 
-            color: #FFFFFF;
-
-            flex: none;
-            order: 0;
-            flex-grow: 0;
+    color: #FFFFFF;
+    order: 0;
 }
 
 .cc_content_text{
+    width: 100%;
+    max-height: 70px;
 
-            width: 100%;
-            max-height: 70px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
 
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 19px;
-
-
-            color: #FFFFFF;
-
-            flex: none;
-            order: 1;
-            flex-grow: 0;
-
+    color: #FFFFFF;
+    order: 1;
 }
 
 .cc_content_small{
 
-            width: 100%;
-            max-height: 16px;
+    width: 100%;
+    max-height: 16px;
 
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
 
-            color: #81909E;
-
-            flex: none;
-            order: 2;
-            flex-grow: 0;
+    color: #81909E;
+    order: 2;
 }
 
 .about {
-
 }
 
 .about_header_container{
-
 }
 .about header{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
 
-            font-weight: 400;
-            font-size: 36px;
-            line-height: 49px;
-            text-align: center;
-
-            color: #03213C;
+    color: #03213C;
 }
 
 .card_about_container{
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -554,14 +502,10 @@ footer{
 
     color: #03213C;
     background:#F3F6F9;
-
-    flex: none;
     order: 0;
-    flex-grow: 0;
 }
 
 .ca_content_main{
-
    width: 100%;
    height: 198px;
 
@@ -570,10 +514,7 @@ footer{
    line-height: 22px;
 
    color: #03213C;
-
-   flex: none;
    order: 1;
-   flex-grow: 0;
 }
 
 .more {
@@ -630,7 +571,6 @@ footer{
 }
 
 .cm_content_header{
-
     width: 100%;
     max-height: 50px;
     font-weight: 600;
@@ -640,14 +580,10 @@ footer{
     padding-bottom:5px;
 
     color: #03213C;
-
-    flex: none;
     order: 0;
-    flex-grow: 0;
 }
 
 .cm_content_main{
-
     width: 100%;
     max-height: 38px;
 
@@ -656,10 +592,7 @@ footer{
     line-height: 19px;
 
     color: #81909E;
-
-    flex: none;
     order: 1;
-    flex-grow: 0;
 }
 
 .connection{
@@ -686,10 +619,7 @@ footer{
     line-height: 49px;
 
     color: #FFFFFF;
-
-    flex: none;
     order: 0;
-    flex-grow: 0;
 }
 
 .connection_content{
@@ -701,10 +631,7 @@ footer{
     line-height: 22px;
 
     color: #FFFFFF;
-
-    flex: none;
     order: 1;
-    flex-grow: 0;
 }
 
 .news{
@@ -749,9 +676,6 @@ footer{
 
     background: #FFFFFF;
     border-radius: 30px;
-
-    flex: none;
-    flex-grow: 0;
 }
 
 .news_cards{
@@ -779,12 +703,8 @@ footer{
     line-height: 19px;
     padding:0px;
     margin:0px;
-
     color: #81909E;
-
-    flex: none;
     order: 0;
-    flex-grow: 0;
 }
 
 .news_name{
@@ -794,11 +714,8 @@ footer{
 
       color: #03213C;
 
-      flex: none;
       order: 1;
       align-self: stretch;
-      flex-grow: 0;
-
 }
 
 .news_anno{
@@ -807,11 +724,8 @@ footer{
         line-height: 22px;
 
         color: #03213C;
-
-        flex: none;
         order: 2;
         align-self: stretch;
-        flex-grow: 0;
 }
 
 .news_nav{
@@ -829,9 +743,6 @@ footer{
     line-height: 49px;
 
     color: #03213C;
-
-    flex: none;
-    flex-grow: 0;
 }
 
 .accordion{
@@ -910,10 +821,8 @@ footer{
 
         color: #03213C;
 
-        flex: none;
         order: 0;
         align-self: stretch;
-        flex-grow: 0;
     }
 
    /* стили для услуг*/
@@ -948,27 +857,21 @@ footer{
         background: #FFFFFF;
         border-radius: 43px;
 
-        flex: none;
         order: 0;
         align-self: stretch;
-        flex-grow: 0;
 
-}
 
 .nav_offer_block{
-        padding:12px;
+    padding:12px;
         /* Text/Bold */
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
         /* Secondary/Secondary */
-        color: #81909E;
+    color: #81909E;
         /* Inside auto layout */
-        transition:0.1s;
-
-        flex: none;
-        order: 0;
-        flex-grow: 0;
+    transition:0.1s;
+    order: 0;
 }
 
 .nav_offer_block:hover {
@@ -981,24 +884,17 @@ footer{
     font-size: 36px;
     line-height: 49px;
     color: #03213C;
-
-    flex: none;
     order: 1;
     align-self: stretch;
-    flex-grow: 0;
-}
 
+}
 
 .offer_title{
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
-
     color: #03213C;
-
-    flex: none;
     order: 3;
-    flex-grow: 0;
 }
 
 .offer_tariff_container{
@@ -1011,8 +907,6 @@ footer{
     gap: 20px;
 
     order: 4;
-    flex-grow: 0;
-
 }
 
 .offer_card_container{
@@ -1043,10 +937,8 @@ footer{
 
     color: #03213C;
 
-    flex: none;
     order: 0;
     align-self: stretch;
-    flex-grow: 0;
 }
 
 
@@ -1056,10 +948,8 @@ footer{
 
     color: #81909E;
 
-    flex: none;
     order: 1;
     align-self: stretch;
-    flex-grow: 0;
 }
 
 .form_offer_container{
@@ -1083,7 +973,6 @@ footer{
 
     background: #F3F6F9;
     border-radius: 4px;
-
 }
 
 select {
@@ -1096,7 +985,6 @@ select {
 
     background: #F3F6F9;
     border-radius: 4px;
-
 }
 
 .offer_wrapper{
