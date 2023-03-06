@@ -8,39 +8,38 @@
         Заявка на подключение
     </header>
 </div>
-<div class="nav_offer">
-    <a href="/offer/internet+tv" class="nav_offer_block manrope"> Интернет + ТВ </a>
-    <a href="/offer/internet" class="nav_offer_block manrope"> Интернет </a>
-    <a href="/offer/tv" class="nav_offer_block manrope"> ТВ </a>
-    <a href="/offer/hosting" class="nav_offer_block manrope"> Хостинг </a>
-</div>
 
 <section class="section">
-    <div class="container">
+    <div style="background:#F3F6F9; padding:20px 0 0 0; gap:20px; display:flex; flex-direction:column;" class="container">
+        <div style="margin:0 0 0 240px;">
+                <div class="nav_offer">
+                    <a href="/offer/internet+tv" class="nav_offer_block manrope"> Интернет + ТВ </a>
+                    <a href="/offer/internet" class="nav_offer_block manrope"> Интернет </a>
+                    <a href="/offer/tv" class="nav_offer_block manrope"> ТВ </a>
+                    <a href="/offer/hosting" class="nav_offer_block manrope"> Хостинг </a>
+                </div>
+        </div>
         <div class="section__tabs tabs">
             <div class="tabs__head">
                 <div class="tabs__caption manrope" data-tab="home"> Конфигурация сервера</div>
                 <div class="tabs__caption manrope" data-tab="portfolio"> Готовые сервера</div>
-
             </div>
             <div class="tabs__body">
                 <div class="tabs__content" data-tab="home">
 
                     <div class="offer_container">
-
                         <div class="offer">
-
 
                             <div class="offer_name manrope">
                                 Хостинг услуги
                             </div>
 
                             <div style="display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    padding: 0px;
-                    gap: 15px;
-                    order:2">
+                                        flex-direction: row;
+                                        align-items: flex-start;
+                                        padding: 0px;
+                                        gap: 15px;
+                                        order:2">
                                 <select name="tariff_info">
                                     <option value="Аренда физического сервера"> Аренда физического сервера</option>
                                     <option value="Аренда стойко сервера"> Аренда стойко сервера</option>
@@ -127,11 +126,13 @@
                             </div>
                             <h4 style="order:8; color:black" class="manrope"> Операционная система:</h4>
                         </div>
-
-                        <div class="form_offer_container">
-                            <div class="manrope offer_title">
+                    </div>
+                    <div style="display: flex;
+                               flex-direction: row; gap:50px;">
+                            <div class="form_offer_container">
+                            <h2 class="manrope offer_title">
                                 Оформите заявку на подключение
-                            </div>
+                            </h2>
                             <form method="post">
                                 {% csrf_token %}
                                 <div class="form_offer">
@@ -155,23 +156,39 @@
                                         {{offer_form.city}}
                                     </div>
 
+                                    <div>
+
+                                    <h4> Расчет стоимости тарифа:</h4>
+                                    <select name="tariff_info" onblur="raschitat();" id="id_tariff_info">
+                                        <option value="Начальный 850 рублей">Начальный</option>
+                                        <option value="Комфортный 1000 рублей"> Комфортный</option>
+                                        <option value="Оптимальный 2000 рублей"> Оптимальный</option>
+                                    </select>
+
                                 </div>
+                                </div>
+
                                 <div>
                                     {{offer_form.adress}}
                                 </div>
-
                                 <input class="submit_button" type="submit" value="Отправить заявку">
-
                             </form>
+                            <div>
 
                         </div>
 
                     </div>
+                            <div class="calculator_container">
+                                <h2 class="manrope"> Итоговая стоимость: </h2>
+                                <div class="manrope" style="font-size:20px;" id="stoimost"></div>
 
+                                <div class="manrope" style="margin:100px 0 0px 0px;"> Вы также можете связаться с нами по телефону:</div>
+                                <h2 class="manrope"> +7(499) 404-04-71 </h2>
+                            </div>
                 </div>
-
+                    </div>
                 <div class="tabs__content" data-tab="portfolio">
-                    <div style="margin:0 0 0 350px">
+                    <div style="margin:0 0 0 240px;">
                             <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
                             <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
                             <img src="{% static 'img/пока_что_плашка_потом_из_базы.png' %}"  alt="Картинка"/>
@@ -260,14 +277,13 @@
   background: #8CC628;
 }
 .tabs__body {
-  background: var(--primary);
+  background: #fff;
   position: relative;
   top: -2px;
   transition: 0.25s;
 }
 .tabs__content {
   display: none;
-  color: var(--color);
   transform: scaleY(0.8);
   opacity: 0;
   transform-origin: center top;
@@ -309,13 +325,14 @@
 }
 
 
-
-
-
+select[name="tariff_info"]{
+    background: #fff;
+}
+.section{padding:0;}
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => { // Структура страницы загружена и готова к взаимодействию
+  document.addEventListener('DOMContentLoaded', () => { // Структура страницы загружена и готова к взаимодействию
 
   const tabs = () => { // объявляем основную функцию для вкладок, чтобы вся логика была в одном месте
     const head = document.querySelector('.tabs__head') // ищем элемент с кнопками и записываем в константу
@@ -357,10 +374,5 @@
   tabs() // вызываем основную функцию
 
 })
-
-
-
-
-
 </script>
 {% endblock %}

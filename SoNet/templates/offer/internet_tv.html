@@ -56,51 +56,66 @@
 </div>
 
 
-<div class="form_offer_container" >
-    <div class="manrope offer_title">
-            Оформите заявку на подключение
+ <div style="display: flex;
+                    flex-direction: row; gap:50px;">
+            <div class="form_offer_container">
+            <h2 class="manrope offer_title">
+                Оформите заявку на подключение
+            </h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form_offer">
+                    <div>
+                        {{offer_form.user_id}}
+                    </div>
+
+                    <div>
+                        {{offer_form.name}}
+                    </div>
+
+                    <div>
+                        {{offer_form.phone_number}}
+                    </div>
+
+                    <div>
+                        {{offer_form.region}}
+                    </div>
+
+                    <div>
+                        {{offer_form.city}}
+                    </div>
+
+                    <div>
+
+                    <h4> Расчет стоимости тарифа:</h4>
+                    <select name="tariff_info" onblur="raschitat();" id="id_tariff_info">
+                        <option value="Начальный 850 рублей">Начальный</option>
+                        <option value="Комфортный 1000 рублей"> Комфортный</option>
+                        <option value="Оптимальный 2000 рублей"> Оптимальный</option>
+                    </select>
+
+                </div>
+                </div>
+
+                <div>
+                    {{offer_form.adress}}
+                </div>
+                <input class="submit_button" type="submit" value="Отправить заявку">
+            </form>
+            <div>
+
         </div>
-    <form method="post">
-        {% csrf_token %}
-        <div class="form_offer">
-            <div>
-                {{offer_form.user_id}}
-            </div>
-
-            <div>
-                {{offer_form.name}}
-            </div>
-
-            <div>
-                {{offer_form.phone_number}}
-            </div>
-
-            <div>
-                {{offer_form.region}}
-            </div>
-
-            <div>
-                {{offer_form.city}}
-            </div>
-            <div>
-
-            <h4> Расчет стоимости тарифа:</h4>
-            <select name="tariff_info" onblur="raschitat();" id="id_tariff_info">
-                <option value="Начальный 850 рублей">Начальный</option>
-                <option value="Комфортный 1000 рублей"> Комфортный</option>
-                <option value="Оптимальный 2000 рублей"> Оптимальный</option>
-            </select>
-            <div class="manrope" style="font-size:20px;" id="stoimost"></div>
-        </div>
-        </div>
-
-        <div>
-            {{offer_form.adress}}
-        </div>
-        <input class="submit_button" type="submit" value="Отправить заявку">
-    </form>
-    <div>
 
     </div>
+            <div class="calculator_container">
+                <h2 class="manrope"> Итоговая стоимость: </h2>
+                <div class="manrope" style="font-size:20px;" id="stoimost"></div>
+
+                <div class="manrope" style="margin:100px 0 0px 0px;"> Вы также можете связаться с нами по телефону:</div>
+                <h2 class="manrope"> +7(499) 404-04-71 </h2>
+            </div>
 </div>
+
+    </div>
+
 {% endblock %}

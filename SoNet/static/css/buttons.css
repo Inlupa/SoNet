@@ -103,20 +103,19 @@
             color: #FFFFFF;
 }
 
-
 /*
 button for home or flat */
 
 .switch {
   position: relative;
-  display: inline-block;
+  display:flex;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
   width: 157px;
   height: 44px;
-
-  order: 2;
   align-self: stretch;
   flex-grow: 0;
-
 }
 
 /* Hide default HTML checkbox */
@@ -126,9 +125,10 @@ button for home or flat */
 .slider1 {
   position: absolute;
   cursor: pointer;
-  dispay:flex;
-  align-items: center;
-  justify-content: center;
+  display:flex;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
   flex-direction: column;
   top: 0;
   left: 0;
@@ -138,14 +138,14 @@ button for home or flat */
   border-radius: 60px;
   -webkit-transition: .4s;
   transition: .4s;
-
-
 }
 
 .slider1:before {
   position: absolute;
   dispay:flex;
   text-align:center;
+  justify-content:center;
+  align-items:center;
   content: "Дом";
   width: 81px;
   height: 32px;
