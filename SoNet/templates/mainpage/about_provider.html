@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} Вход {% endblock %}
+{% block content %}
+{% load static %}
+
+
+<div class="slider_container manrope">
+    <header class="slider manrope">
+        О провайдере
+    </header>
+</div>
+
+
+
+<section class="about_container">
+    <div class="about_us">
+        <div class="above_map">
+            <p class="manrope" style="font-size: 36px;font-weight: 400;color: #03213C; margin:0;"> Контакты </p>
+            <p class="manrope" style="font-size: 24px;font-weight: 600;color: #03213C; margin:0;" > Онлайн поддержка </p>
+            <p class="manrope" style="font-size: 16px;font-weight: 400;color: #81909E; margin:0;" > Круглосуточно </p>
+
+            <p class="manrope" style="font-size: 24px;font-weight: 400;color: #1A78CF; margin:0;" > +7(499) 404-04-71 </p>
+            <p class="manrope" style="font-size: 24px;font-weight: 400;color: #1A78CF; margin:0;" > info@sonet.ru </p>
+
+            <p class="manrope" style="font-size: 24px;font-weight: 600;color: #03213C; margin:0;" > Наш юридический адрес </p>
+            <p class="manrope" style="font-size: 16px;font-weight: 400;color: #03213C; margin:0;" > Улица Ленина, 17, Яхрома, Московская обл., 141840 </p>
+        </div>
+
+       <img src="{% static 'img/map.png' %}" width="1400px" height="600px" alt="Картинка"/>
+    </div>
+</section>
+<style>
+
+.about_us{
+    display:flex;
+    padding:50px 260px 50px 260px;
+    flex-direction:column;
+    gap:10px;
+}
+
+.above_map{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap:30px;
+}
+</style>
+{% endblock %}

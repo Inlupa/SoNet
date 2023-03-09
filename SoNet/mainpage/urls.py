@@ -19,4 +19,6 @@ urlpatterns = [
         views.listing_api,
         name="news-api"
     ),
+
+    path("about_provider", about_provider, name="about_provider"),
 ]

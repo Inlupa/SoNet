@@ -49,6 +49,10 @@ def listing_api(request):
 
     return JsonResponse(payload)
 
+
+
+def about_provider(request):
+    return render(request, 'mainpage/about_provider.html')
 # def homepage(request):
 #     # Все данные
 #     news_list = News.objects.all()
