@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %} Вход {% endblock %}
+{% block title %} Хостинг{% endblock %}
 {% load static %}
 {% block content %}
 
@@ -10,7 +10,7 @@
 </div>
 
 <section class="section">
-    <div style="background:#F3F6F9; padding:20px 0 0 0; gap:20px; display:flex; flex-direction:column;"
+    <div style="padding:20px 0 0 0; gap:20px; display:flex; flex-direction:column;"
          class="container">
         <div style="margin:0 0 0 240px;">
             <div class="nav_offer">
@@ -27,10 +27,8 @@
             </div>
             <div class="tabs__body">
                 <div class="tabs__content" data-tab="home">
-
                     <div class="offer_container">
                         <div class="offer">
-
                             <div class="offer_name manrope">
                                 Хостинг услуги
                             </div>
@@ -40,6 +38,7 @@
                                         align-items: flex-start;
                                         padding: 0px;
                                         gap: 15px;
+                                        flex-wrap:wrap;
                                         order:2">
                                 <select name="tariff_info">
                                     <option value="Аренда физического сервера"> Аренда физического сервера</option>
@@ -56,6 +55,7 @@
                     align-items: flex-start;
                     padding: 0px;
                     gap: 15px;
+                    flex-wrap:wrap;
                     order:4">
                                 <select name="tariff_info">
                                     <option value="Московская область"> Московская область</option>
@@ -74,6 +74,7 @@
                     align-items: flex-start;
                     padding: 0px;
                     gap: 15px;
+                    flex-wrap:wrap;
                     order:6">
                                 <select name="tariff_info">
                                     <option value="Московская область"> Московская область</option>
@@ -93,6 +94,7 @@
                     align-items: flex-start;
                     padding: 0px;
                     gap: 15px;
+                    flex-wrap:wrap;
                     order:7">
                                 <select name="tariff_info">
                                     <option value="Московская область"> Московская область</option>
@@ -111,6 +113,7 @@
                     flex-direction: row;
                     align-items: flex-start;
                     padding: 0px;
+                    flex-wrap:wrap;
                     gap: 15px;
                     order:7">
                                 <select name="tariff_info">
@@ -126,6 +129,113 @@
                                 </select>
                             </div>
                             <h4 style="order:8; color:black" class="manrope"> Операционная система:</h4>
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 0px;
+                    flex-wrap:wrap;
+                    gap: 15px;
+                    order:8">
+
+                                <div class="nopad text-center image-checkbox">
+                                    <img src="{% static 'img/server_pic.png' %}" width="161px" height="99px"
+                                         alt="Картинка"/>
+                                    <input type="checkbox" name="image[]" value=""/>
+                                    <i class="fa fa-check hidden"></i>
+                                </div>
+                                <div class="nopad text-center image-checkbox">
+                                    <img src="{% static 'img/server_pic.png' %}" width="161px" height="99px"
+                                         alt="Картинка"/>
+                                    <input type="checkbox" name="image[]" value=""/>
+                                    <i class="fa fa-check hidden"></i>
+                                </div>
+                                <div class="nopad text-center image-checkbox">
+                                    <img src="{% static 'img/server_pic.png' %}" width="161px" height="99px"
+                                         alt="Картинка"/>
+                                    <input type="checkbox" name="image[]" value=""/>
+                                    <i class="fa fa-check hidden"></i>
+                                </div>
+                                <div class="nopad text-center image-checkbox">
+                                    <img src="{% static 'img/server_pic.png' %}" width="161px" height="99px"
+                                         alt="Картинка"/>
+                                    <input type="checkbox" name="image[]" value=""/>
+                                    <i class="fa fa-check hidden"></i>
+                                </div>
+                                <div class="nopad text-center image-checkbox">
+                                    <img src="{% static 'img/server_pic.png' %}" width="161px" height="99px"
+                                         alt="Картинка"/>
+                                    <input type="checkbox" name="image[]" value=""/>
+                                    <i class="fa fa-check hidden"></i>
+                                </div>
+                                <div class="nopad text-center image-checkbox">
+                                    <img src="{% static 'img/server_pic.png' %}" width="161px" height="99px"
+                                         alt="Картинка"/>
+                                    <input type="checkbox" name="image[]" value=""/>
+                                    <i class="fa fa-check hidden"></i>
+                                </div>
+                                <div class="nopad text-center image-checkbox">
+                                    <img src="{% static 'img/server_pic.png' %}" width="161px" height="99px"
+                                         alt="Картинка"/>
+                                    <input type="checkbox" name="image[]" value=""/>
+                                    <i class="fa fa-check hidden"></i>
+                                </div>
+                            </div>
+
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 0px;
+                    flex-wrap:wrap;
+                    gap: 15px;
+                    order:9">
+                                <select name="tariff_info">
+                                    <option value="2022 Standart (64-bit)"> 2022 Standart (64-bit)</option>
+                                </select>
+
+                                <select name="tariff_info">
+                                    <option value="Server 1"> Server 1</option>
+                                </select>
+                            </div>
+                            <h5 style="order:10; color:black" class="manrope"> Модель потребления трафика:</h5>
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    padding: 0px;
+                    flex-wrap:wrap;
+                    gap: 15px;
+                    order:11">
+                                <select name="tariff_info">
+                                    <option value="30 ТБ/мес. полоса 1 Гбит/с"> 30 ТБ/мес. полоса 1 Гбит/с</option>
+                                </select>
+
+                                <select name="tariff_info">
+                                    <option value="∞ ТБ/мес. полоса 100 Мбит/с"> ∞ ТБ/мес. полоса 100 Мбит/с</option>
+                                </select>
+                            </div>
+
+
+                            <h5 class="manrope" style="order:12; color:black"> Тарифный план </h5>
+                            <div style="display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    flex-wrap:wrap;
+                    padding: 0px;
+                    gap: 15px;
+                    order:13;">
+
+                                <select name="tariff_info">
+                                    <option value="2022 Standart (64-bit)"> 2022 Standart (64-bit)</option>
+                                </select>
+
+                                <select name="tariff_info">
+                                    <option value="Server 1"> Server 1</option>
+                                </select>
+
+                                <select name="tariff_info">
+                                    <option value="Server 1"> Server 1</option>
+                                </select>
+                            </div>
+
                         </div>
                     </div>
                     <div style="display: flex;
@@ -246,6 +356,38 @@
 
 <style>
 
+.nopad {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+/*image gallery*/
+.image-checkbox {
+	cursor: pointer;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 4px solid transparent;
+	margin-bottom: 0;
+	outline: 0;
+}
+.image-checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.image-checkbox-checked {
+	border-color: red;
+}
+.image-checkbox .fa {
+  position: absolute;
+  color: #4A79A3;
+  background-color: #fff;
+  padding: 10px;
+  top: 0;
+  right: 0;
+}
+.image-checkbox-checked .fa {
+  display: block !important;
+}
 
 .tabs {
   overflow: hidden;
@@ -255,6 +397,7 @@
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
+
 }
 .tabs__caption {
   flex: 1;
@@ -333,9 +476,30 @@ select[name="tariff_info"]{
 }
 .section{padding:0;}
 
+
 </style>
 
 <script>
+
+          $(".image-checkbox").each(function () {
+          if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
+            $(this).addClass('image-checkbox-checked');
+          }
+          else {
+            $(this).removeClass('image-checkbox-checked');
+          }
+        });
+
+        // sync the state to the input
+        $(".image-checkbox").on("click", function (e) {
+          $(this).toggleClass('image-checkbox-checked');
+          var $checkbox = $(this).find('input[type="checkbox"]');
+          $checkbox.prop("checked",!$checkbox.prop("checked"))
+
+          e.preventDefault();
+        });
+
+
   document.addEventListener('DOMContentLoaded', () => { // Структура страницы загружена и готова к взаимодействию
 
   const tabs = () => { // объявляем основную функцию для вкладок, чтобы вся логика была в одном месте
@@ -378,6 +542,7 @@ select[name="tariff_info"]{
   tabs() // вызываем основную функцию
 
 })
+
 
 </script>
 {% endblock %}

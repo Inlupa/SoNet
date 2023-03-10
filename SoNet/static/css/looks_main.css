@@ -843,9 +843,10 @@ footer{
         /* BG/Light */
         flex-direction:column;
         background: #F3F6F9;
-        border-radius: 60px
+        border-radius: 60px;
+
         order:1;
-        }
+}
 
 .offer{
     display: flex;
@@ -853,6 +854,7 @@ footer{
     align-items: flex-start;
     gap: 15px;
     padding: 30px 260px;
+    order:1;
 }
 
 .nav_offer{

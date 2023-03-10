@@ -39,8 +39,6 @@ def user_register(request):
     return render(request, 'account/register.html', {'user_form': user_form})
 
 
-
-
 def user_logout(request):
     logout(request)
     return render(request, 'mainpage/mainpage.html')
