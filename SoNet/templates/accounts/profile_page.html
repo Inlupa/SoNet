@@ -1,0 +1,88 @@
+{% include "profile.html" %}
+{% block content %}
+
+<div class="profile_container">
+
+    <div class="nav_container">
+        <p class= "manrope"> Услуги: </p>
+        <a class= "manrope" href="#">  Подключенные услуги </a>
+        <a class= "manrope" href="#">  История операций  </a>
+
+        <p class= "manrope"> Помощь: </p>
+
+        <a class= "manrope" href="#">  FAQ  </a>
+
+    </div>
+
+    <div class="extra_menu">
+        <a class= "manrope" href="#">  Настройка профиля  </a>
+        <a class= "manrope" href="{% url 'change_password'%}">  Смена пароля  </a>
+    </div>
+
+    <h1 class= "manrope" >
+        Тут заполнение страницы
+    </h1>
+</div>
+
+<style>
+.profile_container{
+    display:flex;
+    flex-direction:row;
+    height:100%;
+}
+
+.nav_container{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    padding: 0 7px 0 0;
+    border-right: solid #E3EAF1;
+    border-bottom: solid #E3EAF1;
+}
+
+.nav_container a{
+
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #03213C;
+    padding:15px;
+    border-radius:10px;
+}
+
+.nav_container p{
+    font-weight: 400;
+    font-size: 12px;
+
+    color: #81909E;
+}
+.nav_container a:hover{
+    background:#F3F6F9;
+}
+.extra_menu{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    padding:10px 10px 0 10px;
+    border-right: solid #E3EAF1;
+    border-bottom: solid #E3EAF1;
+}
+
+.extra_menu a{
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #03213C;
+    padding:15px;
+    border-radius:10px;
+}
+
+.extra_menu a:hover{
+    background:#F3F6F9;
+}
+
+html, body {
+  height: 100%;
+}
+</style>
+{% endblock %}

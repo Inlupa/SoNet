@@ -67,17 +67,27 @@
                 <div class="menuitem  flex "><a href="#" class="manrope"> Новости </a></div>
                 <div class="menuitem  flex "><a href="/about_provider" class="manrope"> О провайдере </a></div>
             </div>
-            <div>
-                <div class="navitem flex Button_small_blue">
+
+            <div class="navitem flex Button_small_blue">
                     <a href="#"> Заявка на услуги </a>
-                </div>
             </div>
+
             <div class="accounts manrope">
-                <div class="navitem flex ">
-                    <a href="/login">
-                        <img src="{% static 'img/account_logo.png' %}" width="18px" height="18px" alt="Картинка"/>
-                        Личный кабинет
-                    </a>
+                <div class="navitem flex">
+                {% if request.user.is_authenticated %}
+
+                 <a href="/profile">
+                                <img src="{% static 'img/account_logo.png' %}" width="18px" height="18px" alt="Картинка"/>
+                                Личный кабинет
+                            </a>
+
+                {% else %}
+                <a href="/login">
+                                <img src="{% static 'img/account_logo.png' %}" width="18px" height="18px" alt="Картинка"/>
+                                Личный кабинет
+                            </a>
+                {% endif %}
+
                 </div>
             </div>
         </div>

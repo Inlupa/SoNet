@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel='stylesheet' href="{% static 'css/looks_main.css' %}">
+    <link rel='stylesheet' href="{% static 'css/new_classes.css' %}">
+    <link rel='stylesheet' href="{% static 'css/buttons.css' %}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body class="all_wrapper">
+
+    <div class="navbar">
+        <div class="nav-container">
+            <div class="navitem flex">
+                <a href="/"> <img src="{% static 'img/main_logo.png' %}" width="155.19px"
+                                  height="38.82px" alt="Картинка"/>
+                </a>
+            </div>
+
+            <div class= "manrope"> Баланс </div>
+            <div class= "manrope"> Оповещения </div>
+            <div class= "manrope"> Абонемент </div>
+            <a href="/logout" class= "manrope"> Выйти </a>
+
+        </div>
+    </div>
+<div class="line"></div>
+</body>
+

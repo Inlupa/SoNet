@@ -1,9 +1,7 @@
 .Button_small_blue{
-
          display: flex;
          flex-direction: row;
          align-items: flex-start;
-          position: absolute;
 }
 
 .Button_small_blue a{
@@ -21,11 +19,6 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
 }
 .Button_small_blue a:hover {
     background: #8CC628;

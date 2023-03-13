@@ -15,13 +15,13 @@ def user_login(request):
                     login(request, user)
                     return render(request, 'mainpage/mainpage.html')
                 else:
-                    return HttpResponse('Disabled account')
+                    return HttpResponse('Disabled accounts')
             else:
                 messages.info(request, 'Неправильный пароль')
                 return HttpResponseRedirect('/login')
     else:
         form = LoginForm()
-    return render(request, 'account/login.html', {'form': form})
+    return render(request, 'accounts/login.html', {'form': form})
 
 def user_register(request):
     if request.method == 'POST':
@@ -33,13 +33,37 @@ def user_register(request):
             new_user.set_password(user_form.cleaned_data['password'])
             # Save the User object
             new_user.save()
-            return render(request, 'account/register_done.html', {'new_user': new_user})
+            return render(request, 'accounts/register.html', {'new_user': new_user})
     else:
         user_form = UserRegistrationForm()
-    return render(request, 'account/register.html', {'user_form': user_form})
+    return render(request, 'accounts/register.html', {'user_form': user_form})
 
 
 def user_logout(request):
     logout(request)
     return render(request, 'mainpage/mainpage.html')
     # Redirect to a success page.
+
+def profile_page(request):
+    return render(request, 'accounts/profile_page.html')
+
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
+from django.shortcuts import render, redirect
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)  # Important!
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('change_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = PasswordChangeForm(request.user)
+    return render(request, 'accounts/change_password.html', {
+        'form': form
+    })
