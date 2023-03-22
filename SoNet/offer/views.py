@@ -61,3 +61,13 @@ def hosting(request):
         if offer_form.is_valid():
             offer_form.save()
     return render(request,'offer/hosting_1.html', context={'offer_form':offer_form})
+
+
+def hosting_stoiko(request):
+    offer_form = OfferInfoForm(request.POST)
+    if request.method == 'POST':
+        # если юзер заел в профиль то подтянуть айди и сотальные данные из базы, если нет то надо
+        offer_form = OfferInfoForm(request.POST)
+        if offer_form.is_valid():
+            offer_form.save()
+    return render(request,'offer/hosting_2.html', context={'offer_form':offer_form})

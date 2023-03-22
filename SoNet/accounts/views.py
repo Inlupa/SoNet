@@ -47,6 +47,9 @@ def user_logout(request):
 def profile_page(request):
     return render(request, 'accounts/profile_page.html')
 
+def profile_change(request):
+    return render(request, 'accounts/profile_change_params.html')
+
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
