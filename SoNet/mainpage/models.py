@@ -7,7 +7,3 @@ class News(models.Model):
     pub_date = models.DateField()
     news_name = models.CharField(max_length=100)
     news_url = models.CharField(max_length=100, blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'news'

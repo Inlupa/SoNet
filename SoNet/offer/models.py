@@ -26,9 +26,11 @@ class OfferInfo(models.Model):
     name = models.CharField(max_length=100)
     tariff_info = models.CharField(max_length=100, blank=True, null=True)
 
-    class Meta:
-        managed = False
-        db_table = 'offer_info'
+    def __str__(self):
+        """
+        String for representing the MyModelName object (in Admin site etc.)
+        """
+        return self.tariff_info
 
 
 class TariffsInternet(models.Model):
@@ -36,26 +38,30 @@ class TariffsInternet(models.Model):
     price = models.CharField(max_length=100)
     id = models.IntegerField(primary_key=True)
 
-    class Meta:
-        managed = False
-        db_table = 'tariffs_internet'
-
+    def __str__(self):
+        """
+        String for representing the MyModelName object (in Admin site etc.)
+        """
+        return self.name
 
 class TariffsInternetTv(models.Model):
     name = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
     id = models.IntegerField(primary_key=True)
 
-    class Meta:
-        managed = False
-        db_table = 'tariffs_internet+tv'
-
+    def __str__(self):
+        """
+        String for representing the MyModelName object (in Admin site etc.)
+        """
+        return self.name
 
 class TariffsTv(models.Model):
     name = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
     id = models.IntegerField(primary_key=True)
 
-    class Meta:
-        managed = False
-        db_table = 'tariffs_tv'
+    def __str__(self):
+        """
+        String for representing the MyModelName object (in Admin site etc.)
+        """
+        return self.name

@@ -74,12 +74,8 @@ ALLOWED_HOSTS = ['85.26.234.248:10001', 'localhost', '0.0.0.0:8000', '127.0.0.1'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'hornetm3',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'SoNet_DB',
     }
 }
 
