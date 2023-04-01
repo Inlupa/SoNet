@@ -13,7 +13,7 @@ class OfferInfoForm(forms.ModelForm):
             'city': forms.Select(attrs={'class': 'input_offer', 'placeholder': 'Город'}),
             'phone_number': forms.TextInput(attrs={'class': 'form-control input_offer', 'placeholder': 'Номер телефона'}),
             'name': forms.TextInput(
-                attrs={'class': 'form-control input_offer', 'placeholder': 'Имя'}),
+                attrs={'class': 'form-control input_offer', 'placeholder': 'Имя', 'value':'Anton'}),
             'adress': forms.Textarea(attrs={'class': 'form-control input_offer', 'type': 'text', 'placeholder': 'Адрес'}),
         }
         labels = {

@@ -52,8 +52,3 @@ var name = "Оптимальный"
 ////    window.location = "http://127.0.0.1:8000/offer/internet+tv?tariff=" + name + "&price="+ price
 //}
 
-async function send () {
-    let val = 300
-    await take_py(val)();
-}
-send ()

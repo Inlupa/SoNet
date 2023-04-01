@@ -27,10 +27,8 @@ class OfferInfo(models.Model):
     tariff_info = models.CharField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        """
-        String for representing the MyModelName object (in Admin site etc.)
-        """
-        return self.tariff_info
+
+        return self.name
 
 
 class TariffsInternet(models.Model):

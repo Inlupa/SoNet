@@ -21,9 +21,7 @@ def internet_tv(request):
     offer_form = OfferInfoForm(request.POST)
     tariffs = TariffsInternetTv.objects.all()
 
-    # name = request.GET.get("tariff", None)
-    # price = request.GET.get("price", None)
-    # print(name, price)
+
     if request.method == 'POST':
         #если юзер заел в профиль то подтянуть айди  и сотальные данные из базы, если нет то надо
         offer_form = OfferInfoForm(request.POST)

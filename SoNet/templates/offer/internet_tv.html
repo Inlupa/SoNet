@@ -46,7 +46,7 @@
                                                         height="40px" alt="Картинка"/>
                 </div>
 
-                <h3 class="manrope"> {{tariff.price}}  <input  onclick="myFunction()" id = {{tariff.id}} type="checkbox"> </h3>
+                <h3 class="manrope"> {{tariff.price}}  <input class="check_input"  value={{tariff.price}}  onchange="Change(this);" type="checkbox"> </h3>
 
             </div>
             {% endfor %}
@@ -86,12 +86,8 @@
 
                     <div>
 
-                    <h4> Расчет стоимости тарифа:</h4>
-                    <select name="tariff_info" onblur="raschitat();" id="id_tariff_info">
-                        <option value="Начальный 850 рублей">Начальный</option>
-                        <option value="Комфортный 1000 рублей"> Комфортный</option>
-                        <option value="Оптимальный 2000 рублей"> Оптимальный</option>
-                    </select>
+
+                    <input type="hidden" id="id_tariff_info"  name ="tariff_info">
 
                 </div>
                 </div>
@@ -123,5 +119,24 @@
         margin: -60px 0 0 0;
     }
 </style>
+<script>
+const v = document.getElementById("id_tariff_info");
+
+function Change(Element) {
+
+	if (Element.checked == true)
+        {
+             v.value = Element.value;
+             console.log('Checked');
+             document.getElementById('stoimost').innerHTML = "";
+             document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ v.value;
+        }
+
+	else {
+	        Element.removeAttribute("value");
+	      }
+
+}
+</script>
 
 {% endblock %}
