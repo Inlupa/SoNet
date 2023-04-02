@@ -24,6 +24,7 @@ def user_login(request):
     return render(request, 'accounts/login.html', {'form': form})
 
 def user_register(request):
+    user_form = UserRegistrationForm(request.POST)
     if request.method == 'POST':
         user_form = UserRegistrationForm(request.POST)
         if user_form.is_valid():
@@ -34,6 +35,7 @@ def user_register(request):
             # Save the User object
             new_user.save()
             return render(request, 'accounts/register.html', {'new_user': new_user})
+        user_form = UserRegistrationForm()
     else:
         user_form = UserRegistrationForm()
     return render(request, 'accounts/register.html', {'user_form': user_form})

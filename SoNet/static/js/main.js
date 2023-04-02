@@ -177,25 +177,29 @@ new Swiper('.image-slider',{
     });
 
 
-
+/* Запихиваем в калькулятор */
 function raschitat() {
     cvet  = document.getElementById('id_tariff_info').value;
-    switch (cvet) {
-       case "Начальный 850 рублей":
-          cena = 0;
-          break
-       case "Комфортный 1000 рублей":
-          cena = 350;
-          break
-        case "Оптимальный 2000 рублей":
-          cena = 150;
-          break
-       default:
-          cena = 0;
-          break
-    }
     document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ cena +" р.";
 }
 
+/* Сохранение для того чтобы передать значение в калькулятор + передаем значение в базу */
+const v = document.getElementById("id_tariff_info");
+function Change(Element) {
+
+	if (Element.checked == true)
+        {
+             v.value = Element.value;
+             console.log('Checked');
+             document.getElementById('stoimost').innerHTML = "";
+             document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ v.value;
+             Element.nextElementSibling.innerHTML = "Выбран";
+        }
+
+	else {
+	        document.getElementById('stoimost').innerHTML = "";
+	        Element.nextElementSibling.innerHTML = "Выбрать";
+	      }
+}
 
 

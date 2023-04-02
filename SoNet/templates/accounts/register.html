@@ -70,7 +70,7 @@
 
         <h2 class="manrope" > Вход </h2>
         <form action="." method="post" >
-            <div class="login_form">
+            <div class="login_form" style="padding:50px 0 0 50px;">
             <div>
                 {{ user_form.username}}
             </div>
@@ -87,10 +87,12 @@
             <div>
                 {{ user_form.email}}
             </div>
+
+                <div class="Button_small_blue" style="margin:10px 0;">
+                     <input class="submit_button" type="submit" onclick=" href='/' " value="Войти">
+                </div>
             </div>
-            <div class="Button_small_blue" style="margin:10px 0;">
-                <input  class="submit_button" type="submit" value="Войти">
-            </div>
+
             {% csrf_token %}
         </form>
 

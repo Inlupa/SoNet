@@ -41,13 +41,22 @@
                     <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
                 </div>
 
-                <div style="padding:30px;">
-                    <img src="{% static 'img/img_tariff.png' %}"  width="260px"
-                                                        height="40px" alt="Картинка"/>
+                <div class="offer_card_info" style="flex-direction:row;">
+                    <img src="{% static 'img/speed.png'%}"/>
+                    <div class="manrope offer_card_info_text"> {{tariff.speed}} Мб/сек </div>
                 </div>
 
-                <h3 class="manrope"> {{tariff.price}}  <input class="check_input"  value={{tariff.price}}  onchange="Change(this);" type="checkbox"> </h3>
-
+                <div class="offer_card_info" style="flex-direction:row;">
+                    <img src="{% static 'img/channels.png'%}"/>
+                    <div class="manrope offer_card_info_text"> {{tariff.channels}} Каналов </div>
+                </div>
+                <div class="offer_card_info">
+                    <h3 class="manrope"> {{tariff.price}}  </h3>
+                    <label class="checkbox-btn manrope">
+                            <input  value="{{tariff.price}}" name="{{tariff.name}}" onchange="Change(this);" type="checkbox">
+                            <span> Выбрать </span>
+                    </label>
+                </div>
             </div>
             {% endfor %}
         </div>
@@ -64,9 +73,9 @@
             <form method="post">
                 {% csrf_token %}
                 <div class="form_offer">
-                    <div>
-                        {{offer_form.user_id}}
-                    </div>
+                    <input type="hidden" name="user_id" value="0" required="" id="id_user_id">
+
+                    <input type="hidden" name="date"   id="id_date">
 
                     <div>
                         {{offer_form.name}}
@@ -85,7 +94,6 @@
                     </div>
 
                     <div>
-
 
                     <input type="hidden" id="id_tariff_info"  name ="tariff_info">
 
@@ -113,29 +121,26 @@
 
 
 <style>
-
-    .offer_container{
-
-        margin: -60px 0 0 0;
-    }
+.offer_container{
+    margin: -60px 0 0 0;
+}
 </style>
 <script>
 const v = document.getElementById("id_tariff_info");
-
 function Change(Element) {
 
 	if (Element.checked == true)
         {
-             v.value = Element.value;
-             console.log('Checked');
+             v.value =  "Заявка интернет + ТВ "+ Element.name + " " + Element.value;
              document.getElementById('stoimost').innerHTML = "";
-             document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ v.value;
+             document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ Element.value;
+             Element.nextElementSibling.innerHTML = "Выбран";
         }
 
 	else {
-	        Element.removeAttribute("value");
+	        document.getElementById('stoimost').innerHTML = "";
+	        Element.nextElementSibling.innerHTML = "Выбрать";
 	      }
-
 }
 </script>
 
