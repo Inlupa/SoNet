@@ -1,5 +1,6 @@
 from django import forms
 from .models import *
+
 from django.utils.timezone import now
 
 class OfferInfoForm(forms.ModelForm):
@@ -15,12 +16,13 @@ class OfferInfoForm(forms.ModelForm):
             'phone_number': forms.TextInput(attrs={'class': 'form-control input_offer', 'placeholder': 'Номер телефона'}),
             'name': forms.TextInput(
                 attrs={'class': 'form-control input_offer', 'placeholder': 'Имя'}),
-            'adress':forms.Textarea(attrs={'class': 'form-control input_offer', 'type': 'text', 'placeholder': 'Адрес'}),
+            'adress':forms.Textarea(attrs={'class': 'form-control input_offer', 'type': 'text', 'placeholder': 'Введите ваш адрес' }),
         }
         labels = {
+            'name':'Ваше имя',
             'region': 'Регион',
             'city': 'Город:',
-            'phone_number': 'Номер телефона',
+            'phone_number': 'Телефон',
             'adress': 'Адрес',
         }
 

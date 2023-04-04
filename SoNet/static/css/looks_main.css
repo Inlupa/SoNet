@@ -947,22 +947,31 @@ footer{
 }
 
 .form_offer{
-        display: grid;
-        /*grid-template-columns: repeat(2, 1fr);*/
-        column-gap: 0px;
-        row-gap:20px
+        display: flex;
+        flex-direction:column;
+        gap:20px
     }
+
+.form_field{
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+}
 
 .input_offer{
     display: flex;
     flex-direction: row;
     align-items: center;
+
     min-width:335px;
     padding: 14px 24px;
-
+    font-family: 'Manrope';
     background: #F3F6F9;
     border-radius: 4px;
+
+    border-width: 0px;
 }
+input{ border-width: 0px;}
 
 select {
     display: flex;
@@ -973,7 +982,7 @@ select {
     padding: 14px 24px;
     min-width:385px;
     gap: 10px;
-
+    border-width: 0px;
     background: #F3F6F9;
     border-radius: 4px;
 }
@@ -991,7 +1000,7 @@ select {
     width: 533px;
     height: 260px;
     border-radius:30px;
-    margin:120px 0 20px 260px;
+    margin:130px 20px; 25px 0px;
     justify-content:flex-start;
     background:#F3F6F9;
     padding:50px;
@@ -1000,4 +1009,18 @@ select {
 
 h3{
     margin:0;
+}
+
+.small_label {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color:#81909E;
+}
+
+textarea{
+    resize:none;
+    width: 740px;
+    height:92px;
 }

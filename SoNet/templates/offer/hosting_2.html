@@ -130,34 +130,65 @@
         Оформите заявку на подключение
     </div>
     <form method="post">
-        {% csrf_token %}
-        <div class="form_offer">
-            <div>
-                {{offer_form.user_id}}
-            </div>
+                {% csrf_token %}
+                <div class="form_offer">
+                    <input type="hidden" name="user_id" value="0" required="" id="id_user_id">
 
-            <div>
-                {{offer_form.name}}
-            </div>
+                    <input type="hidden" name="date"   id="id_date">
 
-            <div>
-                {{offer_form.phone_number}}
-            </div>
 
-            <div>
-                {{offer_form.region}}
-            </div>
+                    <h3 class="manrope"> Контактные данные: </h3>
+                    <div class="form_field">
 
-            <div>
-                {{offer_form.city}}
-            </div>
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                            <div class="small_label"> Ваше имя </div>
+                            {{offer_form.name}}
+                        </div>
 
-        </div>
-        <div>
-            {{offer_form.adress}}
-        </div>
-        <input class="submit_button" type="submit" value="Отправить заявку">
-    </form>
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                            <div class="small_label"> Телефон </div>
+                            {{offer_form.phone_number}}
+                        </div>
+
+                    </div>
+
+                    <h3 class="manrope"> Адрес подключения: </h3>
+                    <div class="form_field">
+
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                            <div class="small_label"> Регион </div>
+                            {{offer_form.region}}
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                             <div class="small_label"> Город </div>
+                             {{offer_form.city}}
+                        </div>
+                    </div>
+
+                     {{offer_form.adress}}
+
+
+                    <input type="hidden" id="id_tariff_info"  name ="tariff_info">
+                    <div class="form_field">
+                        <input type="checkbox" style="box-sizing: border-box;
+                            width: 24px;
+                            height: 24px;
+
+                            /* Line/Inactive */
+
+                            border: 1px solid #CAD6E2;
+                            border-radius: 4px;">
+                        <div class="small_label" style="margin:0 75px 0 0;"> Отправляя заявку, я соглашаюсь на обработку своих персональных данных, согласно <br> <b> политике конфиденциальности </b>  </div>
+                        <div class="Button_small_blue" >
+                            <input class="submit_button" type="submit" value="Отправить заявку">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </form>
 </div>
 
 <style>

@@ -66,7 +66,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'SoNet.wsgi.application'
 
-ALLOWED_HOSTS = ['85.26.234.248:10001', 'localhost', '0.0.0.0:8000', '127.0.0.1']
+ALLOWED_HOSTS = ['85.26.234.248:10001', 'localhost', '0.0.0.0:8000', '127.0.0.1','sonet.it-control.ru']
 # ALLOWED_HOSTS = ['0.0.0.0']
 
 # Database

@@ -77,52 +77,84 @@
 
                     <input type="hidden" name="date"   id="id_date">
 
-                    <div>
-                        {{offer_form.name}}
+
+                    <h3 class="manrope"> Контактные данные: </h3>
+                    <div class="form_field">
+
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                            <div class="small_label"> Ваше имя </div>
+                            {{offer_form.name}}
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                            <div class="small_label"> Телефон </div>
+                            {{offer_form.phone_number}}
+                        </div>
+
                     </div>
 
-                    <div>
-                        {{offer_form.phone_number}}
+                    <h3 class="manrope"> Адрес подключения: </h3>
+                    <div class="form_field">
+
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                            <div class="small_label"> Регион </div>
+                            {{offer_form.region}}
+                        </div>
+
+                        <div style="display:flex; flex-direction:column; gap:5px;">
+                             <div class="small_label"> Город </div>
+                             {{offer_form.city}}
+                        </div>
                     </div>
 
-                    <div>
-                        {{offer_form.region}}
-                    </div>
+                     {{offer_form.adress}}
 
-                    <div>
-                        {{offer_form.city}}
-                    </div>
-
-                    <div>
 
                     <input type="hidden" id="id_tariff_info"  name ="tariff_info">
+                    <div class="form_field">
+                        <input type="checkbox" style="box-sizing: border-box;
+                            width: 24px;
+                            height: 24px;
+
+                            /* Line/Inactive */
+
+                            border: 1px solid #CAD6E2;
+                            border-radius: 4px;">
+                        <div class="small_label" style="margin:0 75px 0 0;"> Отправляя заявку, я соглашаюсь на обработку своих персональных данных, согласно <br> <b> политике конфиденциальности </b>  </div>
+                        <div class="Button_small_blue" >
+                            <input class="submit_button" type="submit" value="Отправить заявку">
+                        </div>
+                    </div>
 
                 </div>
-                </div>
 
-                <div>
-                    {{offer_form.adress}}
-                </div>
-                <input class="submit_button" type="submit" value="Отправить заявку">
+
             </form>
             <div>
 
         </div>
 
     </div>
-            <div class="calculator_container">
-                <h2 class="manrope"> Итоговая стоимость: </h2>
-                <div class="manrope" style="font-size:20px;" id="stoimost"></div>
+           <div class="calculator_container">
+        <h2 class="manrope"> Итоговая стоимость: </h2>
+        <div class="manrope" style="font-size:20px;" id="stoimost"> Минимальная стоимость - миллиард рублей</div>
 
-                <div class="manrope" style="margin:100px 0 0px 0px;"> Вы также можете связаться с нами по телефону:</div>
-                <h2 class="manrope"> +7(499) 404-04-71 </h2>
-            </div>
+        <div class="manrope" style="margin:100px 0 0px 0px;"> Вы также можете связаться с нами по телефону:</div>
+        <h2 class="manrope"> +7(499) 404-04-71 </h2>
+    </div>
 </div>
 
 
 <style>
 .offer_container{
     margin: -60px 0 0 0;
+}
+
+
+.form_field{
+
+    display:flex;
+    flex-direction:row;
 }
 </style>
 <script>
