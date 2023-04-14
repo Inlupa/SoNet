@@ -4,6 +4,7 @@ html {
     align-items: center;
     justify-content: center;
     background: #FFFFFF;
+    box-sizing: border-box;
 }
 /* это все дальше хедер */
 
@@ -252,16 +253,20 @@ footer{
 
     display:flex;
     height: 400px;
+    flex-direction: column;
+    gap:35px;
     width:100%;
     /* Secondary/Secondary */
     background: #1A78CF;
     order:0;
+    padding: 0 0 0 265px;
     z-index:-100;
 }
 
 .slider{
     display:flex;
-    padding:100px;
+
+    margin: 100px 0 0 0;
     font-weight: 400;
     font-size: 54px;
     line-height: 74px;
@@ -786,7 +791,7 @@ footer{
 
     .accordion__header:hover {
       color: #609800;
-      transition: 0.1;
+      transition: transform 0.1s;
     }
 
     .accordion__item:not(.accordion__item_show) .accordion__header {
@@ -839,6 +844,9 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+    border-radius: 60px;
+
+    background: #F3F6F9;
     padding: 30px 260px;
     order:1;
 }
@@ -851,7 +859,6 @@ footer{
         width:500px;
         background: #FFFFFF;
         border-radius: 43px;
-
         order: 0;
 }
 .nav_offer_block{
@@ -885,7 +892,7 @@ footer{
     font-size: 24px;
     line-height: 33px;
     color: #03213C;
-    order: 3;
+    order: 2;
 }
 
 .offer_tariff_container{
@@ -1000,7 +1007,7 @@ select {
     width: 533px;
     height: 260px;
     border-radius:30px;
-    margin:130px 20px; 25px 0px;
+    margin:130px 20px 25px 0px;
     justify-content:flex-start;
     background:#F3F6F9;
     padding:50px;
@@ -1023,4 +1030,12 @@ textarea{
     resize:none;
     width: 740px;
     height:92px;
+}
+
+.offer_send{
+    display: flex;
+    flex-direction: row;
+    gap:50px;
+    background: #FFF;
+    order:5;
 }

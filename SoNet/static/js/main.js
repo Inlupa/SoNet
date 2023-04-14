@@ -24,75 +24,6 @@ new Swiper('.image-slider',{
 });
 
 
-    /*async function getData(url, page, paginateBy) {
-        const urlWithParams = url + "?" + new URLSearchParams({
-            page: page,
-            per_page: paginateBy
-        })
-        const response = await fetch(urlWithParams);
-        return response.json();
-    }
-
-    class FauxPaginator {
-        constructor(perPage) {
-            this.perPage = perPage
-            this.pageIndex = 1
-            this.container = document.querySelector("#keywords")
-            this.elements = document.querySelectorAll("pre")
-            this.label = document.querySelector("#current")
-            this.prev = document.querySelector("#prev")
-            this.next = document.querySelector("#next")
-            this.prev.addEventListener("click", this.onPrevClick.bind(this))
-            this.next.addEventListener("click", this.onNextClick.bind(this))
-            this.goToPage()
-        }
-
-        onPrevClick(event) {
-            event.preventDefault()
-            this.pageIndex--
-            this.goToPage()
-        }
-
-        onNextClick(event) {
-            event.preventDefault()
-            this.pageIndex++
-            this.goToPage()
-        }
-
-        addElement(keyword) {
-
-            const pre = document.ch
-
-            pre.append(keyword)
-
-            this.container.appendChild(pre)
-        }
-
-        goToPage() {
-            getData(".json", this.pageIndex, this.perPage)
-                .then(response => {
-                    this.container.innerHTML = '';
-                    response.data.forEach((el) => {
-
-                        this.addElement(el.news_name)
-                        this.addElement(el.news_url)
-                        this.addElement(el.pub_date)
-                        this.addElement(el.news_anno)
-
-                    });
-                    this.label.innerText = this.pageIndex
-                    const firstPage = this.pageIndex === 1
-                    const lastPage = !response.page.has_next
-                    this.prev.style.display = firstPage ? "none" : "inline-block"
-                    this.next.style.display = lastPage ? "none" : "inline-block"
-                });
-        }
-    }
-
-    new FauxPaginator(3);*/
-
-
-
     class ItcAccordion {
       constructor(target, config) {
         this._el = typeof target === 'string' ? document.querySelector(target) : target;
@@ -184,22 +115,8 @@ function raschitat() {
 }
 
 /* Сохранение для того чтобы передать значение в калькулятор + передаем значение в базу */
-const v = document.getElementById("id_tariff_info");
-function Change(Element) {
 
-	if (Element.checked == true)
-        {
-             v.value = Element.value;
-             console.log('Checked');
-             document.getElementById('stoimost').innerHTML = "";
-             document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ v.value;
-             Element.nextElementSibling.innerHTML = "Выбран";
-        }
 
-	else {
-	        document.getElementById('stoimost').innerHTML = "";
-	        Element.nextElementSibling.innerHTML = "Выбрать";
-	      }
-}
+
 
 
