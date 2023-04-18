@@ -36,6 +36,7 @@ class TariffsInternet(models.Model):
     name = models.CharField(max_length=100)
     speed = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
+    sale = models.BooleanField(default=False)
     id = models.IntegerField(primary_key=True)
 
     def __str__(self):
@@ -45,6 +46,7 @@ class TariffsInternetHouse(models.Model):
     name = models.CharField(max_length=100)
     speed = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
+    sale = models.BooleanField(default=False)
     id = models.IntegerField(primary_key=True)
 
     def __str__(self):
@@ -55,6 +57,7 @@ class TariffsInternetTv(models.Model):
     speed = models.CharField(max_length=100)
     channels = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
+    sale = models.BooleanField(default=False)
     id = models.IntegerField(primary_key=True)
 
     def __str__(self):
@@ -67,6 +70,7 @@ class TariffsInternetTvHouse(models.Model):
     speed = models.CharField(max_length=100)
     channels = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
+    sale = models.BooleanField(default=False)
     id = models.IntegerField(primary_key=True)
 
     def __str__(self):
@@ -76,6 +80,7 @@ class TariffsTv(models.Model):
     name = models.CharField(max_length=100)
     channels= models.CharField(max_length=100)
     price = models.CharField(max_length=100)
+    sale = models.BooleanField(default=False)
     id = models.IntegerField(primary_key=True)
 
     def __str__(self):

@@ -3,93 +3,96 @@
 {% load static %}
 {% block content %}
 
-<div class="slider_container">
-    <header class="slider manrope">
+<div class="slider">
+    <header class="slider__header manrope">
         Заявка на подключение
     </header>
-    <div class="nav_offer">
-        <a href="/offer/internet+tv" class="nav_offer_block manrope"> Интернет + ТВ </a>
-        <a href="/offer/internet" class="nav_offer_block manrope"> Интернет </a>
-        <a href="/offer/tv" class="nav_offer_block manrope"> ТВ </a>
-        <a href="/offer/hosting" class="nav_offer_block manrope"> Хостинг </a>
-    </div>
+    <div class="slider__nav">
+            <a href="/offer/internet+tv" class="nav__offer manrope"> Интернет + ТВ </a>
+            <a href="/offer/internet" class="nav__offer manrope"> Интернет </a>
+            <a href="/offer/tv" class="nav__offer manrope"> ТВ </a>
+            <a href="/offer/hosting" class="nav__offer manrope"> Хостинг </a>
+        </div>
 </div>
 
-<div class="offer_container">
-    <div class="offer">
-        <div class="offer_name manrope">
-            ТВ
+<div class="offer">
+        <div class="offer__name manrope">
+            Спутниковое телевидение
         </div>
-        <div class="manrope offer_title">
-            Выберите тарифное предложение
+        <div class="offer__title manrope">
+            <div class="offer__pointer"> 1 </div>
+            <div> Выберите тарифное предложение </div>
         </div>
-        <div class="offer_tariff_container">
+        <div class="offer__tariffs">
+                        {% for tariff in tariffs %}
+                        <div class="offer__card">
+                            <div class="offer__card_info">
+                                <div class="manrope offer__card_title"> {{tariff.name}}</div>
+                                <div class="manrope offer__card_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка
+                                    бесплатно
+                                </div>
+                            </div>
 
-            {% for tariff in tariffs %}
-            <div class="offer_card_container">
-                <div class="offer_card_info" style="margin:0 100px 0 0;">
-                    <div class="manrope offer_card_info_title"> {{tariff.name}}</div>
-                    <div class="manrope offer_card_info_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка бесплатно</div>
-                </div>
+                            <div class="offer__card_speed">
+                                <img src="{% static 'img/speed.png'%}"/>
+                                <div class="manrope offer__card_text"> {{tariff.speed}} Мб/сек</div>
+                            </div>
 
-                <div class="offer_card_info" style="flex-direction:row;">
-                    <img src="{% static 'img/channels.png'%}"/>
-                    <div class="manrope offer_card_info_text"> {{tariff.channels}} каналов</div>
-                </div>
-
-                <div class="offer_card_info" style="margin:0 0 0 50px;">
-                    <h3 class="manrope"> {{tariff.price}} </h3>
-                    <label class="checkbox-btn manrope">
-                        <input class="check" value="{{tariff.price}}" onchange="Change(this);" type="checkbox">
-                        <span> Выбрать </span>
-                    </label>
-                </div>
-
-            </div>
-            {% endfor %}
+                            <div class="offer__card_channels">
+                                <img src="{% static 'img/channels.png'%}"/>
+                                <div class="manrope offer__card_text"> {{tariff.channels}} каналов</div>
+                            </div>
 
 
-        </div>
+                            <div class="offer__card_price">
+                                <h3 class="manrope"> {{tariff.price}} </h3>
+                                <label class="checkbox-btn manrope">
+                                    <input class="check" value="{{tariff.price}}" onchange="Change(this);"
+                                           type="checkbox">
+                                    <span> Выбрать </span>
+                                </label>
+                            </div>
+
+                        </div>
+                        {% endfor %}
+                    </div>
     </div>
-</div>
 
-<div class="offer_send">
-    <div class="form_offer_container">
-        <h2 class="manrope offer_title">
-            Оформите заявку на подключение
-        </h2>
+<div class="form_offer">
+    <div class="form_offer__container">
+        <div class="form_offer__title manrope">
+            <div class="offer__pointer"> 2 </div>
+            <div> Оформите заявку на подключение </div>
+        </div>
         <form method="post">
             {% csrf_token %}
-            <div class="form_offer">
-                <input type="hidden" name="user_id" value="0" required="" id="id_user_id">
+            <div class="form_offer__form">
 
+                <input type="hidden" name="user_id" value="0" required="" id="id_user_id">
                 <input type="hidden" name="date" id="id_date">
 
-                <h3 class="manrope"> Контактные данные: </h3>
-                <div class="form_field">
-
-                    <div style="display:flex; flex-direction:column; gap:5px;">
-                        <div class="small_label"> Ваше имя</div>
+                <div class="manrope form__title"> Контактные данные: </div>
+                <div class="form__row">
+                    <div class ="form__field" >
+                        <div class="form__label"> Ваше имя</div>
                         {{offer_form.name}}
                     </div>
 
-                    <div style="display:flex; flex-direction:column; gap:5px;">
-                        <div class="small_label"> Телефон</div>
+                    <div class ="form__field" >
+                        <div class="form__label"> Телефон </div>
                         {{offer_form.phone_number}}
                     </div>
 
                 </div>
-
-                <h3 class="manrope"> Адрес подключения: </h3>
-                <div class="form_field">
-
-                    <div style="display:flex; flex-direction:column; gap:5px;">
-                        <div class="small_label"> Регион</div>
+                <div class="manrope form__title"> Адрес подключения: </div>
+                <div class="form__row">
+                    <div class ="form__field" >
+                        <div class="form__label"> Регион</div>
                         {{offer_form.region}}
                     </div>
 
-                    <div style="display:flex; flex-direction:column; gap:5px;">
-                        <div class="small_label"> Город</div>
+                    <div class ="form__field" >
+                        <div class="form__label"> Город</div>
                         {{offer_form.city}}
                     </div>
                 </div>
@@ -97,7 +100,7 @@
                 {{offer_form.adress}}
 
                 <input type="hidden" id="id_tariff_info" name="tariff_info">
-                <div class="form_field">
+                <div class="form__row">
                     <input type="checkbox" style="box-sizing: border-box;
                                         width: 24px;
                                         height: 24px;
@@ -106,7 +109,7 @@
 
                                         border: 1px solid #CAD6E2;
                                         border-radius: 4px;">
-                    <div class="small_label" style="margin:0 75px 0 0;"> Отправляя заявку, я соглашаюсь на обработку
+                    <div class="form__label" style="margin:0 90px 0 0;"> Отправляя заявку, я соглашаюсь на обработку
                         своих персональных данных, согласно <br> <b> политике конфиденциальности </b></div>
                     <div class="Button_small_blue">
                         <input class="submit_button" type="submit" value="Отправить заявку">
@@ -126,11 +129,7 @@
 
 </div>
 
-<style>
-    .offer_container {
-        margin: -60px 0 0 0;
-    }
-</style>
+
 
 <script src="{% static 'js/check.js' %}"></script>
 <script src="{% static 'js/tabs.js' %}"></script>
