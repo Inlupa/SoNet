@@ -7,12 +7,11 @@
     gap: 35px;
 
     height: 400px;
-    width: 100%;
     padding: 0 265px;
 
     background: #1A78CF;
 
-    order: 0;
+
     z-index: -100;
 }
 
@@ -36,9 +35,15 @@
 
     background: #FFFFFF;
 
-    order: 0;
 }
 
+.slider__nav a:first-child{
+        color: #1A78CF;
+    }
+.slider__nav:first-child a:first-child{
+        background-color: #8CC628;
+        color: #FFFFFF;
+    }
 .nav__offer {
     display: flex;
     padding:12px;
@@ -47,9 +52,9 @@
     font-size: 16px;
 
     color: #81909E;
-
+    border-radius: 30px;
     transition:0.1s;
-    order: 0;
+
 }
 
 .nav__offer:hover {
@@ -70,12 +75,20 @@
     background: #F3F6F9;
 }
 
+.offer select{
+    background-color: #FFFFFF;
+}
+
+.offer .slider__nav{
+    width: 630px;
+}
+
 .offer__name{
     display: flex;
     font-size: 36px;
     line-height: 49px;
     color: #03213C;
-    order: 1;
+
 }
 
 .offer__title{
@@ -85,7 +98,7 @@
     font-size: 26px;
     line-height: 33px;
     color: #03213C;
-    order: 2;
+
 }
 .offer__tariffs{
     display: flex;
@@ -94,7 +107,7 @@
     align-items: flex-start;
 
     gap: 20px;
-    order: 3;
+
 }
 .offer__card{
     display: flex;
@@ -174,7 +187,7 @@
 
     color: #03213C;
 
-    order: 0;
+
     align-self: stretch;
 }
 .offer__card_text{
@@ -185,10 +198,23 @@
     font-size: 13px;
     color: #81909E;
 
-    order: 1;
+
     align-self: stretch;
 }
 
+.offer__select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Manrope';
+    font-size: 14px;
+    padding: 14px 24px;
+    max-width: 335px;
+    gap: 10px;
+    border-width: 0px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
 
 .form_offer {
     display: flex;
@@ -204,7 +230,7 @@
     flex-direction: column;
     gap: 10px;
 
-    order: 1;
+
 }
 
 .calculator_container {
@@ -218,7 +244,7 @@
     padding: 40px;
     background: #F3F6F9;
 
-    order: 2;
+
 }
 
 .form_offer__title{
@@ -323,8 +349,57 @@ textarea {
 }
 
 h3{
-    margin: 0;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Primary/Primary */
+
+    color: #03213C;
 }
+
+
+.offer__row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+.nopad {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+/*image gallery*/
+.image-checkbox {
+	cursor: pointer;
+	box-sizing: border-box;
+	border: 4px solid transparent;
+	margin-bottom: 0;
+	outline: 0;
+}
+.image-checkbox input[type="checkbox"] {
+	display: none;
+}
+
+.image-checkbox-checked {
+	border-color: red;
+}
+.image-checkbox .fa {
+  position: absolute;
+  color: #4A79A3;
+  background-color: #fff;
+  padding: 10px;
+  top: 0;
+  right: 0;
+}
+.image-checkbox-checked .fa {
+  display: block !important;
+}
+
 
 
 

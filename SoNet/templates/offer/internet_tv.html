@@ -8,10 +8,10 @@
         Заявка на подключение
     </header>
     <div class="slider__nav">
-            <a href="/offer/internet+tv" class="nav__offer manrope"> Интернет + ТВ </a>
-            <a href="/offer/internet" class="nav__offer manrope"> Интернет </a>
-            <a href="/offer/tv" class="nav__offer manrope"> ТВ </a>
-            <a href="/offer/hosting" class="nav__offer manrope"> Хостинг </a>
+            <a href="/offer/internet+tv" class="nav__offer manrope first" > Интернет + ТВ </a>
+            <a href="/offer/internet" class="nav__offer manrope second"> Интернет </a>
+            <a href="/offer/tv" class="nav__offer manrope third"> ТВ </a>
+            <a href="/offer/hosting" class="nav__offer manrope forth"> Хостинг </a>
         </div>
 </div>
 
@@ -78,6 +78,11 @@
                         {% for tariff in tariffs_house %}
                         <div class="offer__card">
                             <div class="offer__card_info">
+
+                                {% if tariff.sale == True %}
+                                <div class="offer__card_sale manrope"> Акция </div>
+                                {% endif %}
+
                                 <div class="manrope offer__card_title"> {{tariff.name}}</div>
                                 <div class="manrope offer__card_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка
                                     бесплатно
@@ -170,7 +175,7 @@
 
     <div class="calculator_container">
         <h2 class="manrope"> Итоговая стоимость: </h2>
-        <div class="manrope" style="font-size:20px;" id="stoimost"></div>
+        <div class="manrope" style="font-size:20px;" id="stoimost"> Начальная стоимость: Бесплатно</div>
 
         <div class="manrope" style="margin:100px 0 0px 0px;"> Вы также можете связаться с нами по телефону:</div>
         <h2 class="manrope"> +7(499) 404-04-71 </h2>
@@ -180,4 +185,4 @@
 
 <script src="{% static 'js/check.js' %}"></script>
 <script src="{% static 'js/tabs.js' %}"></script>
-{% endblock %}
+{% endblock %}св в

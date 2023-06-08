@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %} ТВ {% endblock %}
+{% block title %} Хостинг{% endblock %}
 {% load static %}
 {% block content %}
 
@@ -8,66 +8,81 @@
         Заявка на подключение
     </header>
     <div class="slider__nav">
+            <a href="/offer/hosting" class="nav__offer manrope forth"> Хостинг </a>
             <a href="/offer/tv" class="nav__offer manrope third"> ТВ </a>
             <a href="/offer/internet+tv" class="nav__offer manrope first" > Интернет + ТВ </a>
             <a href="/offer/internet" class="nav__offer manrope second"> Интернет </a>
-            <a href="/offer/hosting" class="nav__offer manrope forth"> Хостинг </a>
         </div>
 </div>
-
 <div class="offer">
-        <div class="offer__name manrope">
-            Спутниковое телевидение
-        </div>
-        <div class="offer__title manrope">
-            <div class="offer__pointer"> 1 </div>
-            <div> Выберите тарифное предложение </div>
-        </div>
-        <div class="offer__tariffs">
-                        {% for tariff in tariffs %}
-                        <div class="offer__card">
-                            <div class="offer__card_info">
 
-                                {% if tariff.sale == True %}
-                                <div class="offer__card_sale manrope"> Акция </div>
-                                {% endif %}
-
-                                <div class="manrope offer__card_title"> {{tariff.name}}</div>
-                                <div class="manrope offer__card_text"> Wi-Fi роутер бесплатно <br> ТВ-приставка
-                                    бесплатно
-                                </div>
-                            </div>
-
-                            <div class="offer__card_speed">
-                                <img src="{% static 'img/speed.png'%}"/>
-                                <div class="manrope offer__card_text"> {{tariff.speed}} Мб/сек</div>
-                            </div>
-
-                            <div class="offer__card_channels">
-                                <img src="{% static 'img/channels.png'%}"/>
-                                <div class="manrope offer__card_text"> {{tariff.channels}} каналов</div>
-                            </div>
-
-
-                            <div class="offer__card_price">
-                                <h3 class="manrope"> {{tariff.price}} </h3>
-                                <label class="checkbox-btn manrope">
-                                    <input class="check" value="{{tariff.price}}" onchange="Change(this);"
-                                           type="checkbox">
-                                    <span> Выбрать </span>
-                                </label>
-                            </div>
-
-                        </div>
-                        {% endfor %}
-                    </div>
+    <div class="slider__nav">
+        <a href="/offer/hosting" class="nav__offer manrope"> Конфигурация сервера </a>
+        <a href="/offer/hosting_preconf" class="nav__offer manrope"> Готовые сервера </a>
+        <a href="/offer/hosting_stoiko" class="nav__offer manrope"> Аренда стойко места </a>
     </div>
+
+    <div class="offer__name manrope">
+            Хостинг услуги
+        </div>
+
+    <div class="offer__title manrope">
+        <div class="offer__pointer"> 1 </div>
+        <div> Выберите конфигурацию сервера</div>
+    </div>
+    <!-- Тут все поля для хостинга 1-->
+    <h3> Расположение: </h3>
+    <div class="form__row">
+
+        <div class="form__field">
+            <label class="form__label"> Регион </label>
+            {{offer_form.region}}
+        </div>
+        <div class="form__field">
+            <label class="form__label"> Пул </label>
+            {{offer_form.pull}}
+        </div>
+    </div>
+
+    <h3> Конфигурация: </h3>
+
+    <div class="form__row">
+        <div class="form__field">
+            {{offer_form.processor}}
+        </div>
+        <div class="form__field">
+            {{offer_form.processor}}
+        </div>
+    </div>
+
+    <div class="form__row">
+        <div class="form__field">
+            {{offer_form.processor}}
+        </div>
+        <div class="form__field">
+            {{offer_form.ram}}
+        </div>
+    </div>
+    <h3> Операционная система: </h3>
+    <div class="form__row">
+        <div class="form__field">
+            {% for os in oses %}
+            <div class="offer__card_os image-checkbox nopad">
+                <img src="{{os.os_pic.url}}">
+
+                <input type="checkbox" value="{{os.os_name}"/>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
 
 <div class="form_offer">
     <div class="form_offer__container">
         <div class="form_offer__title manrope">
-            <div class="offer__pointer"> 2 </div>
-            <div> Оформите заявку на подключение </div>
+            <div class="offer__pointer"> 2</div>
+            <div> Оформите заявку на подключение</div>
         </div>
         <form method="post">
             {% csrf_token %}
@@ -76,27 +91,27 @@
                 <input type="hidden" name="user_id" value="0" required="" id="id_user_id">
                 <input type="hidden" name="date" id="id_date">
 
-                <div class="manrope form__title"> Контактные данные: </div>
+                <div class="manrope form__title"> Контактные данные:</div>
                 <div class="form__row">
-                    <div class ="form__field" >
+                    <div class="form__field">
                         <div class="form__label"> Ваше имя</div>
                         {{offer_form.name}}
                     </div>
 
-                    <div class ="form__field" >
-                        <div class="form__label"> Телефон </div>
+                    <div class="form__field">
+                        <div class="form__label"> Телефон</div>
                         {{offer_form.phone_number}}
                     </div>
 
                 </div>
-                <div class="manrope form__title"> Адрес подключения: </div>
+                <div class="manrope form__title"> Адрес подключения:</div>
                 <div class="form__row">
-                    <div class ="form__field" >
+                    <div class="form__field">
                         <div class="form__label"> Регион</div>
                         {{offer_form.region}}
                     </div>
 
-                    <div class ="form__field" >
+                    <div class="form__field">
                         <div class="form__label"> Город</div>
                         {{offer_form.city}}
                     </div>
@@ -126,14 +141,13 @@
 
     <div class="calculator_container">
         <h2 class="manrope"> Итоговая стоимость: </h2>
-        <div class="manrope" style="font-size:20px;" id="stoimost"> Начальная стоимость: Бесплатно</div>
+        <div class="manrope" style="font-size:20px;" id="stoimost"></div>
 
         <div class="manrope" style="margin:100px 0 0px 0px;"> Вы также можете связаться с нами по телефону:</div>
         <h2 class="manrope"> +7(499) 404-04-71 </h2>
     </div>
 
 </div>
-
 
 <script src="{% static 'js/check.js' %}"></script>
 <script src="{% static 'js/tabs.js' %}"></script>

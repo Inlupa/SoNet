@@ -36,3 +36,22 @@
 .inside_base{
     order:1;
 }
+
+.first{
+    order:1;
+}
+
+.second{
+    order: 2;
+}
+.third{
+    order:3;
+}
+
+.forth{
+    order: 4;
+}
+
+.fifth{
+    order: 5;
+}

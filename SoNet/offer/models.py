@@ -1,21 +1,46 @@
 from django.db import models
-import uuid
-# тут надо добвать тупл для дальнейшего селекта
 
-regions =(
-    ("Москва", "Москва"),
-    ("Московская область", "Московская область"),
-    ("Санкт-Петербург", "Санкт-Петербург"),
-    ("Ленинградская область", "Ленинградская область"),
-)
+class Cities(models.Model):
+    city_id = models.IntegerField()
+    city_name = models.CharField(max_length=100)
+    def __str__(self):
+        return self.city_name
 
+class Regions(models.Model):
+        region_id = models.IntegerField()
+        region_name = models.CharField(max_length=100)
+        def __str__(self):
+            return self.region_name
 
-cities =(
-    ("Москва", "Москва"),
-    ("Санкт-Петербург", "Санкт-Петербург"),
-)
+class Pulls (models.Model):
+        pull_id = models.IntegerField()
+        pull_name = models.CharField(max_length=100)
+        def __str__(self):
+            return self.pull_name
 
-# модель заявки на подключние
+class Processors(models.Model):
+        proc_id = models.IntegerField()
+        proc_name = models.CharField(max_length=100)
+        proc_hz = models.CharField(max_length=100)
+        proc_core_number = models.CharField(max_length=100)
+        def __str__(self):
+            return self.proc_name
+
+class OperSys(models.Model):
+    os_id = models.IntegerField()
+    os_name = models.CharField(max_length=100)
+    os_pic = models.ImageField()
+
+    def __str__(self):
+        return self.os_name
+
+class Ram(models.Model):
+    ram_id = models.IntegerField()
+    ram_size = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.ram_size
+
 class OfferInfo(models.Model):
     user_id = models.IntegerField()
     region = models.CharField(max_length=100)
@@ -31,6 +56,26 @@ class OfferInfo(models.Model):
 
         return self.tariff_info
 
+
+class HostingConfigure(models.Model):
+    user_id = models.IntegerField()
+    region = models.CharField(max_length=100)
+    adress = models.CharField(max_length=100)
+    phone_number = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    offer_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    date = models.DateField(blank=True, null=True)
+    tariff_info = models.CharField(max_length=100, blank=True, null=True)
+
+    server_name = models.CharField(max_length=100)
+    oper_sys = models.CharField(max_length=100)
+    pull = models.CharField(max_length=100)
+    processor = models.CharField(max_length=100)
+    ram = models.CharField(max_length=100)
+
+    traffic = models.CharField(max_length=100)
+    tariff_plan = models.CharField(max_length=100)
 
 class TariffsInternet(models.Model):
     name = models.CharField(max_length=100)

@@ -111,7 +111,7 @@ new Swiper('.image-slider',{
 /* Запихиваем в калькулятор */
 function raschitat() {
     cvet  = document.getElementById('id_tariff_info').value;
-    document.getElementById('stoimost').innerHTML = "Стоимость равна: "+ cena +" р.";
+    document.getElementById('stoimost').innerHTML = "Стоимость тарифа: "+ cena +" р.";
 }
 
 /* Сохранение для того чтобы передать значение в калькулятор + передаем значение в базу */

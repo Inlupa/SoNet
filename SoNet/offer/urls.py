@@ -7,4 +7,5 @@ urlpatterns = [
     # path('offer/internet+tv', get_data, name='get_data'),
     path('offer/hosting', hosting, name='hosting'),
     path('offer/hosting_stoiko', hosting_stoiko, name='hosting_stoiko'),
+    path('offer/hosting_preconf', hosting_preconf, name='hosting_preconf'),
 ]
